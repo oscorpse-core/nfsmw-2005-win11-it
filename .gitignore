@@ -1,0 +1,37 @@
+# Solo documentazione in questo repo.
+# Il pack di gioco va nelle Releases (archivi multi-volume).
+
+# Archivi / build locali
+dist/
+release/
+*.7z
+*.7z.001
+*.7z.002
+*.7z.003
+*.zip
+*.zip.001
+*.rar
+*.part
+
+# Mai versionare il gioco
+speed.exe
+dinput8.dll
+scripts/
+CARS/
+TRACKS/
+SOUND/
+MOVIES/
+Tools/
+CREDITS/
+*.big
+*.bun
+*.bin
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.log
+.vscode/
+.idea/
