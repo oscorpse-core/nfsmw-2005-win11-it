@@ -3,10 +3,13 @@
 Pack **completo e già giocabile** di *Need for Speed: Most Wanted (2005) Black Edition* per **Windows 11**, in italiano.
 
 Nella cartella trovi **già tutto**: gioco, Widescreen Fix, Extra Options, menu/FMV/voci polizia in italiano, tool opzionali.  
-**Non serve il disco del gioco**, non serve installare mod a parte, non serve scaricare altro per la prima partita: scarichi la Release, estrai, avvii `speed.exe`, scegli **Italian**.
+**Non serve il disco del gioco**, non serve installare mod a parte, non serve scaricare altro per la prima partita.
+
+Flusso in una riga: **scarichi i 2 pezzi → estrai col `.001` → sposti la cartella sotto il tuo utente → `speed.exe` → Italian → 1080p**.
 
 > **Questo repository contiene solo la documentazione.**  
-> Il pacchetto di gioco (~3 GB compressi, ~4 GB estratti) è solo nelle **[Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases)** (archivio diviso in 2 pezzi per i limiti di GitHub).
+> Il gioco sta **solo** nelle **[Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases)** (archivio diviso in 2 pezzi).  
+> Il repo è **privato**: per scaricare Assets devi essere **loggato su GitHub** con un account che ha accesso.
 
 Repo: [oscorpse-core/nfsmw-2005-win11-it](https://github.com/oscorpse-core/nfsmw-2005-win11-it)  
 Release attuale: **[v1.0.0](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.0.0)**
@@ -37,44 +40,63 @@ Release attuale: **[v1.0.0](https://github.com/oscorpse-core/nfsmw-2005-win11-it
 | Voce | Dettaglio |
 |------|-----------|
 | Sistema | **Windows 11** (uso principale testato) |
-| Disco | ~4 GB liberi **dopo** l’estrazione |
-| Estrattore | **[7-Zip](https://www.7-zip.org/)** (consigliato) — deve gestire archivi multi-volume `.7z.001` / `.7z.002` |
-| Risoluzione | **1920×1080** testata e consigliata in-game (vedi [Risoluzione e monitor](#risoluzione-e-monitor)) |
+| Account GitHub | Loggato, con accesso a questo repo **privato** (altrimenti non scarichi gli Assets) |
+| Spazio disco | **~3 GB** per scaricare i 2 archivi + **~4 GB** per la cartella estratta. Se tieni archivi *e* cartella insieme servono circa **7 GB** temporanei |
+| Estrattore | **[7-Zip](https://www.7-zip.org/)** — obbligatorio in pratica per `.7z.001` / `.7z.002` |
+| Risoluzione in-game | **1920×1080** (vedi [Risoluzione e monitor](#risoluzione-e-monitor)) |
 | Pad | Xbox / XInput, oppure **DualSense (PS5)** — senza tool extra |
-| Disco di gioco | **Non richiesto** — il setup giocabile è già nella cartella del pack |
+| Disco di gioco | **Non richiesto** |
 
 ---
 
 ## Download e installazione
 
+Segui **nell’ordine** i tre passi. Non saltare il pezzo `.002`.
+
 ### 1. Scarica entrambi i pezzi dalla Release
 
-1. Apri la release **[v1.0.0](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.0.0)** (o l’ultima in **[Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases)**).
-2. Scarica **tutti e due** i file Assets:
-   - `nfsmw-2005-win11-it.7z.001`
-   - `nfsmw-2005-win11-it.7z.002`
-3. Mettili **nella stessa cartella** (es. `Downloads\nfsmw\`).
+1. Accedi a GitHub con un account che vede questo repo.
+2. Apri la release **[v1.0.0](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.0.0)** (o l’ultima in **[Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases)**).
+3. Nella sezione **Assets** scarica **tutti e due** i file:
+   - `nfsmw-2005-win11-it.7z.001` (~1,99 GB)
+   - `nfsmw-2005-win11-it.7z.002` (~1,08 GB)
+4. Mettili **nella stessa cartella** (es. `C:\Users\TUO_NOME\Downloads\nfsmw\`).
 
-Se manca anche un solo pezzo, l’estrazione fallisce.
+**Non** basta il solo `.001`. **Non** estrarre/aprire il solo `.002`. Se manca un pezzo, 7-Zip fallisce.
 
 ### 2. Estrai con 7-Zip
 
-1. Installa [7-Zip](https://www.7-zip.org/) se non ce l’hai.
-2. Tasto destro su **`nfsmw-2005-win11-it.7z.001`** → **7-Zip** → **Estrai qui** (o “Estrai in…”).
-3. 7-Zip userà automaticamente anche il `.002`.
-4. Ottieni la cartella **`nfsmw-2005-win11-it`**.
+1. Installa [7-Zip](https://www.7-zip.org/) se non ce l’hai (poi riapri Esplora file).
+2. Vai nella cartella dove hai i due file `.7z.001` e `.7z.002`.
+3. Tasto destro su **`nfsmw-2005-win11-it.7z.001`**  
+   - Su Windows 11, se non vedi 7-Zip: **Mostra altre opzioni**, poi **7-Zip**.
+4. Scegli **Estrai qui** oppure **Estrai in “nfsmw-2005-win11-it\”**.
+5. Aspetta la fine: 7-Zip legge da solo anche il `.002`.
+6. Controlla che sia comparsa la cartella **`nfsmw-2005-win11-it`** e che dentro ci siano almeno:
+   - `speed.exe`
+   - `dinput8.dll`
+   - cartella `scripts\`
+   - cartella `Tools\`
 
-Non serve unire i pezzi a mano: basta partire dal **`.001`**.
+Se uno di questi manca, l’estrazione non è andata a buon fine: riescarica entrambi i pezzi e ripeti dal `.001`.
 
 ### 3. Sposta la cartella nel percorso consigliato
 
-Segui [Dove mettere la cartella](#dove-mettere-la-cartella), poi [Primo avvio](#primo-avvio).
+1. Crea (se non esiste) la cartella `Games` sotto il tuo utente, es. `C:\Users\TUO_NOME\Games\`.
+2. **Sposta tutta** la cartella `nfsmw-2005-win11-it` lì dentro (non solo `speed.exe`).
+3. Percorso finale atteso:
+
+```text
+C:\Users\TUO_NOME\Games\nfsmw-2005-win11-it\speed.exe
+```
+
+Dettagli e alternative: [Dove mettere la cartella](#dove-mettere-la-cartella). Poi: [Primo avvio](#primo-avvio).
 
 ---
 
 ## Dove mettere la cartella
 
-Metti il gioco **sotto il tuo profilo utente**, in una cartella giochi locale, con un percorso semplice.
+Metti il gioco **sotto il tuo profilo utente**, su disco interno locale, path semplice.
 
 **Consigliato:**
 
@@ -88,39 +110,40 @@ C:\Users\TUO_NOME\Games\nfsmw-2005-win11-it\
 C:\Users\TUO_NOME\Documents\Games\nfsmw-2005-win11-it\
 ```
 
-(Sostituisci `TUO_NOME` con il tuo nome utente Windows.)
+Sostituisci `TUO_NOME` con il tuo nome utente Windows (cartella già presente in `C:\Users\`).
 
 **Perché qui:**
 
-- permessi di scrittura normali (salvataggi, config, eventuali file creati dal gioco);
-- niente UAC tipico di `Program Files`;
-- path corto e prevedibile, utile se qualcosa va storto.
+- scrittura libera (config / file creati dal gioco) senza UAC di `Program Files`;
+- path corto e stabile se qualcosa va storto;
+- niente sync cloud che blocca i file.
 
 **Meglio evitare:**
 
 | Dove | Perché |
 |------|--------|
-| `C:\Program Files\` o `Program Files (x86)\` | UAC / permessi: il gioco può non scrivere o comportarsi in modo strano |
-| Cartelle sync (OneDrive, Google Drive, Dropbox, ecc.) | file bloccati, sync in corso, latenza, corruzione |
-| Solo su rete / NAS / USB come unica copia | lentezza e disconnessioni; tieni almeno una copia su disco interno |
-| Path lunghissimi o con caratteri strani | alcuni tool/mod vecchi gestiscono male path esotici |
+| `C:\Program Files\` o `Program Files (x86)\` | UAC / permessi: comportamenti strani o scrittura negata |
+| Cartelle sync (OneDrive, Google Drive, Dropbox, ecc.) | file bloccati, sync, latenza, rischio corruzione |
+| Solo rete / NAS / USB come unica copia | lentezza e disconnessioni; tieni una copia su disco interno |
+| Path lunghissimi o con caratteri strani | tool/mod vecchi gestiscono male path esotici |
 
-Tieni il nome cartella semplice: `nfsmw-2005-win11-it` va bene. Sposta **tutta** la cartella, non solo `speed.exe`.
+Nome cartella consigliato: `nfsmw-2005-win11-it`. Sposta **sempre l’intera cartella**.
 
 ---
 
 ## Primo avvio
 
-Questo pack è **già impostato per l’italiano** (Widescreen Fix, Extra Options, FMV IT dove presenti, copspeech IT, ecc.). Non serve installare mod né lanciare script per la prima partita.
+Il pack è **già** impostato per l’italiano (Widescreen Fix, Extra Options, FMV IT dove presenti, copspeech IT). Non serve installare mod né lanciare `LangChangeWS.bat` per la prima partita.
 
-1. Entra nella cartella estratta `nfsmw-2005-win11-it`.
-2. Avvia **`speed.exe`** (doppio clic).
-3. Alla schermata lingua scegli **Italian**.  
-   È l’unico passo “manuale”: il contenuto è già IT, ma la lingua va confermata all’avvio — è normale.
-4. In **Opzioni → Video** imposta la risoluzione a **1920×1080** (consigliata).
-5. Se usi il pad: collegalo **prima** dell’avvio, oppure con il gioco già aperto.
+1. Apri `C:\Users\TUO_NOME\Games\nfsmw-2005-win11-it\`.
+2. Doppio clic su **`speed.exe`**.
+3. Se Windows SmartScreen / Defender dice che l’app è sconosciuta: **Ulteriori informazioni** → **Esegui comunque** (solo se hai scaricato dalla *tua* Release di questo repo).
+4. Alla schermata **lingua** scegli **Italian** e conferma.  
+   È l’unico passo “manuale”: i file sono già IT, ma la lingua va scelta all’avvio — è normale.
+5. Vai in **Opzioni → Video** e imposta **1920×1080**.
+6. Se usi il pad: collegalo **prima** di avviare, oppure con il gioco già aperto.
 
-Da qui in poi: riapri sempre `speed.exe` **da questa stessa cartella**.
+Da qui in poi: avvia **sempre** `speed.exe` da questa stessa cartella (non da un’altra copia incompleta).
 
 ---
 
@@ -128,10 +151,10 @@ Da qui in poi: riapri sempre `speed.exe` **da questa stessa cartella**.
 
 | Scenario | Cosa fare |
 |----------|-----------|
-| Monitor Full HD | Imposta **1920×1080** in-game — testata e consigliata |
-| Monitor grandi / ultrawide (es. ~21:9 o pannelli molto larghi) | Il gioco **parte e funziona** anche su questi display; **tieni comunque la risoluzione di gioco a 1080p** |
+| Monitor Full HD | In-game: **1920×1080** — testata e consigliata |
+| Monitor grandi / ultrawide (es. ~21:9 o pannelli molto larghi) | Il gioco **parte e funziona**; **lascia comunque 1080p** nelle opzioni Video del gioco |
 
-In sintesi: desktop o pannello possono essere più grandi/larghi; la risoluzione **nel menu Video del gioco** resta **1920×1080**.
+Il desktop Windows può stare a risoluzione più alta: conta la risoluzione **scelta dentro il menu Video di NFS**.
 
 ---
 
@@ -139,28 +162,30 @@ In sintesi: desktop o pannello possono essere più grandi/larghi; la risoluzione
 
 Setup **ready-to-play** già assemblato:
 
-- Gioco **Black Edition** (file di gioco completi nella cartella)
-- **Widescreen Fix** + **Extra Options** già in `scripts\` (caricati via `dinput8.dll`)
-- **Italiano**: menu, FMV italiani dove presenti, **voci della polizia in italiano**
-- Inglese di backup dove serve (es. alcune cutscene blacklist restano in inglese)
-- **`LangChangeWS.bat`** — solo se la lingua non resta impostata (vedi sotto)
-- **`Tools\Save Editor NFS-MW.exe`** — opzionale, non serve per giocare
+| Elemento | Dove / nota |
+|----------|-------------|
+| Gioco **Black Edition** | File completi nella cartella (niente ISO/disco) |
+| Widescreen Fix + Extra Options | `dinput8.dll` + `scripts\` (`NFSMostWanted.WidescreenFix.*`, `NFSMWExtraOptions.*`) |
+| Italiano | Menu; FMV italiani dove previsti; **voci polizia IT** attive |
+| Backup ENG voci polizia | `SOUND\SPEECH\_english_backup\` |
+| `LangChangeWS.bat` | Solo se la lingua **non resta** impostata (vedi sotto) |
+| Save Editor | `Tools\Save Editor NFS-MW.exe` — **opzionale**, non serve per giocare |
 
-**File / cartelle critici (non cancellare e non spostare fuori dalla root del pack):**
+**Non cancellare / non spostare fuori dalla root del pack:**
 
-- `speed.exe` — eseguibile del gioco
-- `dinput8.dll` — loader delle mod ASI
-- `scripts\` — `NFSMostWanted.WidescreenFix.*`, `NFSMWExtraOptions.*`
+- `speed.exe`
+- `dinput8.dll`
+- `scripts\`
 - `SOUND\`, `MOVIES\`, `CARS\`, `TRACKS\`, `FRONTEND\`, `GLOBAL\`, `LANGUAGES\`, …
 
 ---
 
 ## Controller
 
-- **Xbox** (o pad XInput compatibile): funziona da subito.
-- **PlayStation 5 (DualSense):** funziona su questo setup (testato); **non** serve DS4Windows né wrapper simili.
-- In generale non servono Steam Input né altri tool di mapping.
-- Se il pad non risponde: altro cavo/porta USB, oppure riavvia il gioco con il pad già collegato.
+- **Xbox** (o pad XInput): funziona da subito.
+- **PlayStation 5 (DualSense):** testato su questo setup; **non** serve DS4Windows né wrapper simili.
+- Non servono Steam Input né tool di mapping.
+- Se non risponde: altra porta/cavo USB, oppure chiudi il gioco, collega il pad, riapri `speed.exe`.
 
 ---
 
@@ -168,7 +193,7 @@ Setup **ready-to-play** già assemblato:
 
 Di default i poliziotti sono in **italiano**.
 
-Il gioco legge **solo** questi file in `SOUND\SPEECH\`:
+Il gioco usa **solo** questi 4 file nella root di `SOUND\SPEECH\` (non esistono cartelle `It\` / `En\` in questo pack):
 
 ```text
 SOUND\SPEECH\copspeech.big
@@ -179,33 +204,42 @@ SOUND\SPEECH\copspeech.idx
 
 | Percorso | Contenuto |
 |----------|-----------|
-| `SOUND\SPEECH\` (i 4 file in questa cartella) | **Italiano** — attivo |
-| `SOUND\SPEECH\_english_backup\` | **Inglese** — copia di scorta, non usata finché non la copi sopra |
+| `SOUND\SPEECH\` (i 4 file sopra) | **Italiano** — attivo |
+| `SOUND\SPEECH\_english_backup\` | **Inglese** — scorta; non usata finché non la copi sopra |
 
 ### Passare all’inglese
 
-1. Copia i 4 file italiani da `SOUND\SPEECH\` in una cartella di backup (es. `SOUND\SPEECH\_italian_backup\`).
-2. Copia i 4 file da `_english_backup\` dentro `SOUND\SPEECH\` (sostituisci quelli presenti).
+1. Con il gioco **chiuso**, crea `SOUND\SPEECH\_italian_backup\` (se non c’è).
+2. Copia i 4 file `copspeech.*` da `SOUND\SPEECH\` dentro `_italian_backup\`.
+3. Copia i 4 file da `_english_backup\` dentro `SOUND\SPEECH\` e **sostituisci** quando Windows lo chiede.
+4. Riapri `speed.exe` e verifica in una rincorsa con polizia.
 
 ### Tornare all’italiano
 
-Rimetti i 4 file IT al posto di quelli in `SOUND\SPEECH\`.
+1. Gioco chiuso.
+2. Copia i 4 file da `_italian_backup\` (o dal backup che hai fatto) di nuovo in `SOUND\SPEECH\` sostituendo.
+3. Riapri `speed.exe`.
 
-> `LangChangeWS.bat` **non** gestisce questo scambio: le voci polizia si cambiano solo così.
+> Per le voci polizia **non** usare `LangChangeWS.bat`: in questo pack lo scambio IT/ENG si fa **solo** copiando i file come sopra.
 
 ---
 
 ## Cambio lingua (`LangChangeWS.bat`)
 
-Di norma basta scegliere **Italian** all’avvio — **non** ti serve lo script.
+Di norma basta **Italian** alla schermata iniziale: **non** ti serve lo script.
 
-Se la lingua **non resta** impostata (menu in inglese dopo il riavvio, ecc.):
+Usalo **solo** se la lingua **non resta** (es. menu di nuovo in inglese al riavvio).
 
-1. Tasto destro su **`LangChangeWS.bat`** (nella root del pack) → **Esegui come amministratore**
-2. Digita **`9`** e Invio (= Italian)
-3. Riapri `speed.exe`
+1. Chiudi il gioco.
+2. Nella root del pack: tasto destro su **`LangChangeWS.bat`** → **Esegui come amministratore**  
+   (se non lo fai, lo script si ferma e dice che servono i privilegi admin).
+3. Quando chiede il numero lingua: digita **`9`** e Invio (= **Italian**).
+4. Aspetta il messaggio di cambio lingua, poi chiudi la finestra.
+5. Riapri `speed.exe` e seleziona di nuovo **Italian** se te lo chiede.
 
-Usa solo questo file (versione WS / chiave registro utente `HKCU\SOFTWARE\EA Games\Need for Speed Most Wanted`).
+Cosa fa in pratica: aggiorna file di frontend/lingue e scrive la chiave  
+`HKCU\SOFTWARE\EA Games\Need for Speed Most Wanted` → `Language` = `Italian`.  
+In questo pack **non** ci sono `SOUND\SPEECH\It\` / `En\`: le voci polizia restano gestite come nella sezione precedente.
 
 ---
 
@@ -214,10 +248,10 @@ Usa solo questo file (versione WS / chiave registro utente `HKCU\SOFTWARE\EA Gam
 Percorso: `Tools\Save Editor NFS-MW.exe`
 
 - **Non serve** per giocare.
-- Serve solo se vuoi modificare i salvataggi (progressi / cheat).
-- Lascia l’exe in `Tools\` (non nella root del gioco).
-- I salvataggi di solito **non** stanno nella cartella del pack: sono nel profilo Windows (Documenti / AppData).
-- **Prima di editare:** fai una copia del file di salvataggio.
+- Serve solo per modificare salvataggi (progressi / cheat).
+- Lascia l’exe in `Tools\` (non spostarlo nella root accanto a `speed.exe`).
+- I salvataggi **di solito non** stanno nella cartella del pack: sono sotto il **profilo Windows** (spesso in Documenti / AppData, a seconda di come è stato avviato il gioco).
+- Procedura sicura: fai **una partita** → cerca il file di save aggiornato di recente sotto il tuo utente → **copia di backup** → solo dopo apri l’editor sul file copiato/originale.
 
 ---
 
@@ -225,21 +259,26 @@ Percorso: `Tools\Save Editor NFS-MW.exe`
 
 | Cosa succede | Cosa fare |
 |--------------|-----------|
-| Nessuna scelta lingua / niente widescreen / pad assente | Controlla che ci siano `dinput8.dll` e la cartella `scripts\` nella root del pack (non spostarli) |
-| Menu in italiano ma poliziotti in inglese | In `SOUND\SPEECH\` devono esserci i 4 file IT, non quelli ENG |
-| Il gioco non parte / errori strani | Sposta la cartella sotto `C:\Users\TUO_NOME\Games\` e riprova; evita Program Files e cartelle sync |
-| Estrazione fallisce / “archivio danneggiato” | Hai scaricato **entrambi** `.001` e `.002`? Sono nella stessa cartella? Estrai dal `.001` con 7-Zip. Riescarica se serve |
-| GPU AMD o Intel, problemi grafici / opzioni video strane | Apri `scripts\NFSMostWanted.WidescreenFix.ini`, cerca `ForcedGPUVendor` (di default `0x10DE` = NVIDIA). Prova a metterlo a `0` |
-| Pad non rilevato | Collega il pad prima di `speed.exe`, oppure riavvia il gioco; prova un’altra porta USB |
+| Non vedi / non scarichi gli Assets | Sei loggato su GitHub? Hai accesso al repo privato? |
+| Estrazione fallisce / “archivio danneggiato” | Entrambi `.001` e `.002` presenti e **nella stessa cartella**? Estrai dal **`.001`** con 7-Zip (su Win11: Mostra altre opzioni). Riescarica entrambi |
+| Non trovi il menu 7-Zip | Installa 7-Zip → tasto destro sul `.001` → **Mostra altre opzioni** → 7-Zip |
+| Dopo l’estrazione manca `speed.exe` / `scripts\` | Estrazione incompleta: ripeti dal passo Download |
+| SmartScreen blocca `speed.exe` | Ulteriori informazioni → Esegui comunque (solo da questa Release) |
+| Nessuna scelta lingua / niente widescreen / pad “morto” da fix | Nella root devono esserci `dinput8.dll` e `scripts\` insieme a `speed.exe` |
+| Menu IT ma poliziotti ENG | In `SOUND\SPEECH\` devono esserci i 4 file IT (non quelli ENG) |
+| Lingua non resta al riavvio | `LangChangeWS.bat` come admin → `9` → riapri `speed.exe` |
+| Il gioco non parte / errori strani | Sposta sotto `C:\Users\TUO_NOME\Games\`; evita Program Files e cartelle sync |
+| GPU AMD o Intel, video/opzioni strane | In `scripts\NFSMostWanted.WidescreenFix.ini` metti `ForcedGPUVendor = 0` (default pack: `0x10DE` = NVIDIA) |
+| Pad non rilevato | Collega prima di `speed.exe`, altra porta USB, riavvia il gioco |
 
 ---
 
 ## Limiti noti
 
 - Testato su **Windows 11**, uso principale in **italiano**.
-- Risoluzione in-game consigliata: **1920×1080**. Su monitor grandi/ultrawide il gioco funziona, ma **tieni 1080p** nelle opzioni Video.
-- Alcune cutscene (es. blacklist) restano in **inglese**; tutorial/story FMV italiani sono presenti dove previsti dal pack.
-- Questo repository Git **non** contiene i binari del gioco: solo documentazione. Il download è solo da **Releases**.
+- In-game: **1920×1080**. Su monitor grandi/ultrawide funziona, ma **tieni 1080p** nel menu Video.
+- Alcune cutscene (es. blacklist) restano in **inglese**; gli FMV italiani ci sono dove previsti dal pack.
+- Il repo Git **non** contiene i binari: solo docs. Download solo da **Releases**.
 
 ---
 
@@ -256,10 +295,10 @@ Percorso: `Tools\Save Editor NFS-MW.exe`
 | Cosa | Dove |
 |------|------|
 | Documentazione | Questo repo (`README.md`, `.gitignore`) |
-| Pacchetto giocabile | [Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases) — `nfsmw-2005-win11-it.7z.001` + `.002` |
-| Codice / asset di gioco | **Non** versionati in git (volontariamente) |
+| Pacchetto giocabile | [Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases) — `.7z.001` + `.7z.002` |
+| Binari di gioco | **Non** in git |
 
-Se aggiorni il pack su un’altra macchina: scarica di nuovo la Release, estrai in una cartella nuova (o sostituisci dopo un backup), avvia `speed.exe`.
+Su un’altra macchina: scarica di nuovo **entrambi** gli Assets, estrai dal `.001`, metti la cartella sotto `C:\Users\...\Games\`, avvia `speed.exe`.
 
 <details>
 <summary>Per chi mantiene il pack (opzionale)</summary>
