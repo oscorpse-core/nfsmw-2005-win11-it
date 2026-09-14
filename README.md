@@ -51,34 +51,51 @@ Release attuale: **[v1.0.0](https://github.com/oscorpse-core/nfsmw-2005-win11-it
 
 ## Download e installazione
 
-Segui **nell’ordine** i tre passi. Non saltare il pezzo `.002`.
+### In sintesi (leggi prima questo)
+
+| Domanda | Risposta |
+|---------|----------|
+| Quanti file scarico? | **Due**: `.7z.001` **e** `.7z.002`. Tutti e due obbligatori. |
+| Quanti file “estraggo”? | **Uno solo**: fai tasto destro **solo** sul `.7z.001` → Estrai. |
+| E il `.002`? | **Non** lo estrai a parte. Deve stare **nella stessa cartella** del `.001`: 7-Zip lo usa da solo mentre estrae il `.001`. |
+| Se manca il `.002`? | L’estrazione **fallisce**. Non è un secondo pack: è la **seconda metà** dello stesso archivio. |
+
+Sono un unico archivio spezzato in 2 pezzi (limite GitHub ~2 GB per file). Non sono due zip indipendenti.
+
+Segui **nell’ordine** i tre passi sotto.
 
 ### 1. Scarica entrambi i pezzi dalla Release
 
 1. Accedi a GitHub con un account che vede questo repo.
 2. Apri la release **[v1.0.0](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.0.0)** (o l’ultima in **[Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases)**).
-3. Nella sezione **Assets** scarica **tutti e due** i file:
-   - `nfsmw-2005-win11-it.7z.001` (~1,99 GB)
-   - `nfsmw-2005-win11-it.7z.002` (~1,08 GB)
-4. Mettili **nella stessa cartella** (es. `C:\Users\TUO_NOME\Downloads\nfsmw\`).
+3. Nella sezione **Assets** scarica **tutti e due** i file (nessuno dei due è opzionale):
+   - `nfsmw-2005-win11-it.7z.001` (~1,99 GB) — pezzo 1 di 2
+   - `nfsmw-2005-win11-it.7z.002` (~1,08 GB) — pezzo 2 di 2
+4. Mettili **nella stessa cartella**, senza rinominarli (es. `C:\Users\TUO_NOME\Downloads\nfsmw\`).
 
-**Non** basta il solo `.001`. **Non** estrarre/aprire il solo `.002`. Se manca un pezzo, 7-Zip fallisce.
+Esempio corretto prima di estrarre:
 
-### 2. Estrai con 7-Zip
+```text
+Downloads\nfsmw\nfsmw-2005-win11-it.7z.001
+Downloads\nfsmw\nfsmw-2005-win11-it.7z.002
+```
+
+### 2. Estrai con 7-Zip (parti solo dal `.001`)
 
 1. Installa [7-Zip](https://www.7-zip.org/) se non ce l’hai (poi riapri Esplora file).
-2. Vai nella cartella dove hai i due file `.7z.001` e `.7z.002`.
-3. Tasto destro su **`nfsmw-2005-win11-it.7z.001`**  
+2. Vai nella cartella dove hai **entrambi** i file.
+3. Tasto destro **solo** su **`nfsmw-2005-win11-it.7z.001`**  
    - Su Windows 11, se non vedi 7-Zip: **Mostra altre opzioni**, poi **7-Zip**.
 4. Scegli **Estrai qui** oppure **Estrai in “nfsmw-2005-win11-it\”**.
-5. Aspetta la fine: 7-Zip legge da solo anche il `.002`.
-6. Controlla che sia comparsa la cartella **`nfsmw-2005-win11-it`** e che dentro ci siano almeno:
+5. **Non** fare tasto destro → Estrai sul `.002`. Un’operazione sola sul `.001` basta: 7-Zip legge automaticamente anche il `.002`.
+6. Aspetta la fine (può richiedere alcuni minuti).
+7. Controlla che sia comparsa la cartella **`nfsmw-2005-win11-it`** e che dentro ci siano almeno:
    - `speed.exe`
    - `dinput8.dll`
    - cartella `scripts\`
    - cartella `Tools\`
 
-Se uno di questi manca, l’estrazione non è andata a buon fine: riescarica entrambi i pezzi e ripeti dal `.001`.
+Se uno di questi manca, l’estrazione non è andata a buon fine: riescarica **entrambi** i pezzi e ripeti l’estrazione **dal `.001`**.
 
 ### 3. Sposta la cartella nel percorso consigliato
 
