@@ -13,7 +13,7 @@ release/
 *.rar
 *.part
 
-# Mai versionare il gioco
+# Mai versionare il gioco / redistributable del pack
 speed.exe
 dinput8.dll
 scripts/
@@ -23,9 +23,11 @@ SOUND/
 MOVIES/
 Tools/
 CREDITS/
+_CommonRedist/
 *.big
 *.bun
 *.bin
+*.msi
 
 # Sistema / editor
 .DS_Store
