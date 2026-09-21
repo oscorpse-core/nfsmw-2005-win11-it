@@ -9,7 +9,7 @@ Visione condivisa e verificabile di MW 2005 carriera + QoL su `-qol`.
 | **Doc pubblica utente QoL (IT)** | [`../../QOL.md`](../../QOL.md) · note Release [`../../RELEASE_NOTES-QOL.md`](../../RELEASE_NOTES-QOL.md) |
 | **Agent Cursor (EN)** | [`../../AGENTS.md`](../../AGENTS.md) · indice knowledge → agent: [`../../agent/KNOWLEDGE-INDEX.md`](../../agent/KNOWLEDGE-INDEX.md) |
 
-**Punto fermo 2026-09-21:** freeze **chiuso**; visual **L8** + save coerente (playtest OK); A3/A4; pink drive; DualSense; sospesi **scartati**; **nessun backlog**. Pubblico: **vanilla v1.0.1** shipped; **QoL** = linea Release separata (docs + `pack-docs` ready) — upload solo su OK esplicito.
+**Punto fermo 2026-09-21:** freeze **chiuso**; visual **L8** + save coerente (playtest OK); A3/A4; pink drive; DualSense; sospesi **scartati**; **nessun backlog**. Pubblico: **vanilla v1.0.1** + **QoL v1.1.0-qol**.
 
 ---
 
@@ -51,7 +51,6 @@ Visione condivisa e verificabile di MW 2005 carriera + QoL su `-qol`.
 ## Prossimo
 
 Niente in backlog **gameplay** QoL.  
-Docs Release dual-line: ready (`QOL.md`, `RELEASE_NOTES-QOL.md`, `pack-docs`, `publish-release.ps1 -Line qol`).  
-**Upload** Assets QoL / push = solo quando lo chiedi esplicitamente.
+Release dual-line **live**. Nuovi upload = solo su richiesta esplicita.
 
 Se un doc contraddice `11` → vince `11`.

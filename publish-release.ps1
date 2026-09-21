@@ -152,15 +152,21 @@ Log 'Create draft'
 & gh release create $Tag -R $Repo --draft --title $Title --notes-file $Notes
 if ($LASTEXITCODE -ne 0) { throw 'release create failed' }
 
+# Draft releases often lack a resolvable git tag URL; resolve via list + tag_name.
 $releaseId = 0L
-try {
-  $byTag = (& gh api "repos/$Repo/releases/tags/$Tag" 2>$null) | ConvertFrom-Json
-  if ($byTag -and $byTag.id) { $releaseId = [long]$byTag.id }
-} catch { }
+$allRaw = & gh api "repos/$Repo/releases"
+$all = $allRaw | ConvertFrom-Json
+foreach ($r in @($all)) {
+  if ($r.tag_name -eq $Tag -and $r.id) {
+    $releaseId = [long]$r.id
+    break
+  }
+}
 if ($releaseId -le 0) {
-  $all = (& gh api "repos/$Repo/releases") | ConvertFrom-Json
-  $match = @($all | Where-Object { $_.tag_name -eq $Tag } | Select-Object -First 1)
-  if ($match.Count -gt 0 -and $match[0].id) { $releaseId = [long]$match[0].id }
+  try {
+    $byTag = (& gh api "repos/$Repo/releases/tags/$Tag") | ConvertFrom-Json
+    if ($byTag -and $byTag.id) { $releaseId = [long]$byTag.id }
+  } catch { }
 }
 if ($releaseId -le 0) { throw "Could not resolve release id for tag $Tag" }
 Log "releaseId=$releaseId"

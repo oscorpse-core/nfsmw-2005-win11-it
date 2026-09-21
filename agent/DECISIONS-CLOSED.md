@@ -12,7 +12,7 @@ Unless the user **explicitly** asks to reopen a topic, do not propose these agai
 | Lot rank via TORQUE/MASS | **REJECTED** | Replaced by FE-bars |
 | Infinite Junkman shop | **REJECTED** | A3 = finite 7×2 from markers |
 | Community car pack | **OUT OF SCOPE** | Separate project |
-| Publish QoL in public Release | **READY (not shipped)** | Dual tag `*-qol` on same repo; ship only on explicit ask — see PB 10 / `QOL.md` |
+| Publish QoL in public Release | **SHIPPED** `v1.1.0-qol` | Dual tag live; further uploads only on explicit ask |
 | Keep 3 unique HUD marker-gated | **KEEP** | Shop visual max ≠ unlock marker HUD uniques |
 
 Source (IT): [`../qol-plan/PLAN.md`](../qol-plan/PLAN.md), [`../qol-plan/knowledge/11-COHERENCE-FREEZE.md`](../qol-plan/knowledge/11-COHERENCE-FREEZE.md), [`07-TECH-MODEL-B.md`](../qol-plan/knowledge/07-TECH-MODEL-B.md).

@@ -16,7 +16,7 @@
 
 | Surface | State |
 |---------|--------|
-| GitHub Release | **Vanilla v1.0.1** shipped (stock). **QoL** = separate tag/assets (`*-qol`) — docs ready; ship only on explicit ask |
+| GitHub Release | **Vanilla v1.0.1** + **QoL v1.1.0-qol** (Latest = vanilla) |
 | Local `-qol` | Full QoL freeze applied + playtested |
 | This repo | Docs + agent ecosystem |
 

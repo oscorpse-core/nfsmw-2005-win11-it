@@ -4,7 +4,7 @@ Documento **per chi gioca**: cos’è la versione QoL, cosa cambia rispetto al p
 
 | | |
 |--|--|
-| **Due linee** | Stesso repo GitHub: Release **vanilla** (es. [v1.0.1](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.0.1)) e Release **QoL** (tag `*-qol`, Assets `nfsmw-2005-win11-it-qol.7z.00x`). |
+| **Due linee** | Stesso repo GitHub: Release **vanilla** [**v1.0.1**](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.0.1) e Release **QoL** [**v1.1.0-qol**](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.1.0-qol) (Assets `nfsmw-2005-win11-it-qol.7z.00x`). |
 | **Installazione** | Stesse regole del [README](README.md): 2 pezzi → estrai il `.001` → sposti la cartella → `_CommonRedist` → `speed.exe` → Italian → 1080p. Nel pack estratto leggi anche `LEGGIMI.txt`. |
 | **Note Release QoL** | [`RELEASE_NOTES-QOL.md`](RELEASE_NOTES-QOL.md) |
 | **Base** | Stesso pack completo IT Win11. Il QoL **aggiunge** soft e fix di qualità di vita sulla carriera. |

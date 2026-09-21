@@ -18,9 +18,9 @@ Repo: [oscorpse-core/nfsmw-2005-win11-it](https://github.com/oscorpse-core/nfsmw
 | Linea | Cosa ottieni | Tag / Assets (esempio) | Docs |
 |-------|--------------|------------------------|------|
 | **Vanilla** | Pack IT completo, senza soft carriera | [**v1.0.1**](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.0.1) · `nfsmw-2005-win11-it.7z.00x` | Questo README · [`RELEASE_NOTES.md`](RELEASE_NOTES.md) |
-| **QoL** | Stesso pack **più** economia soft, visual, marker/Junkman, vendita 100%, ecc. | Tag `*-qol` · `nfsmw-2005-win11-it-qol.7z.00x` | [`QOL.md`](QOL.md) · [`RELEASE_NOTES-QOL.md`](RELEASE_NOTES-QOL.md) |
+| **QoL** | Stesso pack **più** economia soft, visual, marker/Junkman, vendita 100%, ecc. | [**v1.1.0-qol**](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.1.0-qol) · `nfsmw-2005-win11-it-qol.7z.00x` | [`QOL.md`](QOL.md) · [`RELEASE_NOTES-QOL.md`](RELEASE_NOTES-QOL.md) |
 
-Oggi pubblica e scaricabile: **vanilla v1.0.1**. La linea QoL usa gli stessi passi di install di questo README; il catalogo di cosa cambia è in **[`QOL.md`](QOL.md)**.
+Entrambe le Release sono **pubbliche** sullo stesso repo. Su GitHub la Release “Latest” resta la **vanilla** (default sicuro); il QoL è il tag `v1.1.0-qol`.
 
 ---
 

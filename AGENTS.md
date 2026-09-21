@@ -15,7 +15,7 @@
 | Piece | Role |
 |-------|------|
 | This git repo | Docs + agent ecosystem (+ Release notes / publish script) |
-| GitHub Releases | Playable packs: **vanilla v1.0.1** shipped; **QoL** = separate tag/assets when explicitly published |
+| GitHub Releases | **vanilla v1.0.1** + **QoL v1.1.0-qol** (separate assets; Latest = vanilla) |
 | `-qol` folder | Local QoL game copy (outside this repo’s binaries) |
 | `qol-tools\` | Attribulator, backups, VLT unpack (gitignored / outside) |
 
@@ -43,7 +43,7 @@
 
 ## Freeze status (2026-09-21)
 
-QoL career freeze on `-qol`: **CLOSED**. No backlog. Public: vanilla **v1.0.1** shipped; QoL Release = dual-line ready (docs/`pack-docs`/`publish-release.ps1 -Line qol`) — **ship only if user explicitly asks**.
+QoL career freeze on `-qol`: **CLOSED**. No backlog. Public: vanilla **v1.0.1** + QoL **v1.1.0-qol**.
 
 See [`agent/CANON.md`](agent/CANON.md) and [`agent/DECISIONS-CLOSED.md`](agent/DECISIONS-CLOSED.md).
 

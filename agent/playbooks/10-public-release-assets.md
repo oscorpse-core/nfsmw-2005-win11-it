@@ -71,7 +71,8 @@ User catalog QoL: [`../../QOL.md`](../../QOL.md). Install manual: [`../../README
 ## Evidence (verified)
 
 - Streaming upload path used for v1.0.1 vanilla.
-- Dual-line script + notes + pack-docs added 2026-09-21 (docs); QoL asset upload only after explicit ask + built 7z.
+- Dual-line script + notes + pack-docs; **QoL `v1.1.0-qol` published 2026-09-21** (assets `.001`/`.002` size-matched; Latest kept on vanilla).
+- Draft ID resolve: prefer `GET /releases` filter by `tag_name` (drafts lack stable tag URL).
 
 ## Links
 

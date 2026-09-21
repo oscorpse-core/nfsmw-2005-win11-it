@@ -3,7 +3,7 @@
 **Punto fermo:** 2026-09-21  
 **Fonte di verità.** Se altri file contraddicono → vale questo.
 
-Copia: `...\nfsmw-2005-win11-it-qol` · Originale pack: intatto · Pubblico: **vanilla v1.0.1** shipped; **QoL** = linea Release separata (`*-qol`) — ship **solo** su richiesta esplicita.
+Copia: `...\nfsmw-2005-win11-it-qol` · Originale pack: intatto · Pubblico: **vanilla v1.0.1** + **QoL v1.1.0-qol** (Assets distinti; Latest GitHub = vanilla).
 
 ---
 
@@ -60,7 +60,7 @@ Nessuno. Freeze carriera **finito** · playtest visual/save **OK**.
 | Rank lotto TORQUE/MASS | **SCARTATO** | Barre FE |
 | Junkman shop infinito | **SCARTATO** | A3 = 7×2 marker |
 | Pack auto community | **FUORI SCOPE** | Progetto a parte |
-| QoL in Release pubblica | **READY / non shipped** | Stesso repo, tag `*-qol` + Assets distinti; catalogo [`../../QOL.md`](../../QOL.md); publish solo su OK esplicito (PB 10) |
+| QoL in Release pubblica | **SHIPPED** `v1.1.0-qol` | Stesso repo; Assets `…-qol.7z.00x`; catalogo [`../../QOL.md`](../../QOL.md) |
 
 ---
 
