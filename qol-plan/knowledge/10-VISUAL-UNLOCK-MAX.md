@@ -1,7 +1,8 @@
-# Visual unlock max (**APPLICATO** + playtest OK)
+# Visual unlock max (**APPLICATO** in live)
 
-Data: 2026-09-19 · **re-apply live 2026-09-21** (perso col pack A3; ripristinato)  
-Intent: pezzi + estetiche sbloccate senza progressione fasce; performance livellata; costi visual **$0**.
+Data: 2026-09-19 · re-apply + **L8** 2026-09-21  
+Intent: pezzi + estetiche sbloccate senza progressione fasce; performance livellata; costi visual **$0**.  
+**Punto fermo:** implementazione chiusa; smoke aerografie integrali = conferma in gioco (non backlog).
 
 ## Come
 
@@ -43,7 +44,9 @@ Script: `qol-visual-unlock-max.nfsms`, `qol-visual-unlock-add15.nfsms`, `qol-vis
 - [x] Performance ancora gated  
 - [x] Re-apply 2026-09-21: bin15 hud/decals/numbers + max livelli  
 - [x] Visual **L8** applicato in live (vinyls/integrali + altre cat. fino a FE LEVEL_08)  
-- [ ] Conferma in-game aerografie **integrali** (tribal/fiamme) sbloccate post-Sonny dopo L8  
+- [ ] Smoke: aerografie **integrali** (tribal/fiamme) sbloccate post-Sonny dopo L8  
+
+
 
 ## Distinzione (2026-09-21)
 

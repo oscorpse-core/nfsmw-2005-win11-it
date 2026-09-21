@@ -3,7 +3,8 @@
 Path e leve della copia **`-qol`**. Freeze: [`11-COHERENCE-FREEZE.md`](11-COHERENCE-FREEZE.md).
 
 **Root QoL:** `C:\Users\andre\_Main\games\nfs2005\nfsmw-2005-win11-it-qol`  
-**Tool:** `C:\Users\andre\_Main\games\nfs2005\qol-tools\`
+**Tool / backup (fuori da questo repo):** `C:\Users\andre\_Main\games\nfs2005\qol-tools\`  
+**Docs:** `qol-plan\` in questo repository.
 
 ---
 

@@ -368,15 +368,16 @@ Percorso: `Tools\Save Editor NFS-MW.exe`
 
 | Cosa | Dove |
 |------|------|
-| Documentazione | Questo repo (`README.md`, `RELEASE_NOTES.md`, `.gitignore`) |
+| Documentazione pack | Questo repo (`README.md`, `RELEASE_NOTES.md`, `.gitignore`) |
 | Pacchetto giocabile | [Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases) — `.7z.001` + `.7z.002` (include `_CommonRedist\`) |
 | Binari di gioco | **Non** in git |
+| Docs QoL carriera (locale, non in Release) | Cartella `qol-plan\` — freeze su copia `-qol`; **non** fa parte di v1.0.1 |
 
 Su un’altra macchina: scarica di nuovo **entrambi** gli Assets, estrai dal `.001`, metti la cartella sotto `C:\Users\...\Games\`, **installa `_CommonRedist`**, avvia `speed.exe`.
 
 <details>
 <summary>Per chi mantiene il pack (opzionale)</summary>
 
-Lo script locale `publish-release.ps1` (se presente) serve solo a pubblicare Assets su GitHub; non fa parte del manuale utente e non va nei binari della Release. Gli archivi in `dist/` restano fuori da git (vedi `.gitignore`). Le note della Release stanno in `RELEASE_NOTES.md`.
+Lo script locale `publish-release.ps1` (se presente) serve solo a pubblicare Assets su GitHub; non fa parte del manuale utente e non va nei binari della Release. Gli archivi in `dist/` restano fuori da git (vedi `.gitignore`). Le note della Release stanno in `RELEASE_NOTES.md`. La cartella `qol-plan\` documenta un ramo QoL **separato** (copia di gioco `-qol` locale); non pubblicare una nuova Release finché non si decide esplicitamente di includere il QoL nel pack.
 
 </details>

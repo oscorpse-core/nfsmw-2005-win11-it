@@ -1,7 +1,8 @@
-# Revisione logiche
+# Revisione logiche (storico)
 
-Stato: **chiuso su S1** — modello B sospeso.  
-Freeze: `11-COHERENCE-FREEZE.md` (tutto il freeze carriera **applicato**).
+> **Storico.** Canonico live: [`11-COHERENCE-FREEZE.md`](11-COHERENCE-FREEZE.md) · piano: [`../PLAN.md`](../PLAN.md).
+
+Stato al punto fermo 2026-09-21: freeze **chiuso**; modello B **SCARTATO** (non sospeso).
 
 Scopo: stesso *cosa fare*; meno smattare; libertà di spesa; gameplay intatto.
 
@@ -16,22 +17,21 @@ Scopo: stesso *cosa fare*; meno smattare; libertà di spesa; gameplay intatto.
 
 ---
 
-## Scelte chiuse
+## Scelte (allineate a `11`)
 
 | Logica | Stato |
 |--------|--------|
 | Win / milestones / cops / mappa | Vanilla |
-| **S1** marker ×6 | Canonico + playtest OK |
-| Modello B | **Sospeso** |
-| Visual post-#15 + $0 | Fatto + playtest OK |
-| Economia soft fissa | Fatto (prezzi OK; cash da verificare in play) |
-| Bounty soft progressiva | Fatto |
-| Garage 25 | Fatto |
-| UnlockAllThings | 0 |
+| **S1** marker ×6 | Canonico OK |
+| Modello B | **SCARTATO** |
+| Visual post-#15 **L8** + $0 | OK live (`10`) |
+| Economia soft fissa | OK (`12`) |
+| Bounty soft progressiva | OK (`13`) |
+| Garage 25 · A3 · A4 · pink drive | OK |
 
 ---
 
 ## Marker
 
 **S1** — prendi tutti (pink, Junkman, unique, cash, jail/impound).  
-Junkman stock ≈ 1 auto full. No shop Junkman infinito.
+Junkman: stock **A3** 7×2 (`16`), non shop infinito.

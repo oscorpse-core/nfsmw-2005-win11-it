@@ -1,8 +1,8 @@
 # QoL Most Wanted 2005 — piano
 
-**Aggiornato:** 2026-09-21  
+**Punto fermo:** 2026-09-21  
 **Copia attiva:** `C:\Users\andre\_Main\games\nfs2005\nfsmw-2005-win11-it-qol`  
-**Originale:** intatto (`...\nfsmw-2005-win11-it`)  
+**Originale pack:** intatto (`...\nfsmw-2005-win11-it`) — release pubblica ancora **v1.0.1** (QoL **non** in Release)  
 **Fonte di verità:** [`knowledge/11-COHERENCE-FREEZE.md`](knowledge/11-COHERENCE-FREEZE.md)
 
 Scopo: stesso loop carriera; meno grind/RNG/economia; libertà di spesa; gare/cops intatti.
@@ -13,11 +13,12 @@ Scopo: stesso loop carriera; meno grind/RNG/economia; libertà di spesa; gare/co
 
 | Area | Stato |
 |------|--------|
-| Freeze carriera | **FINITO** live + playtest OK |
-| Soft cash ×1.4 + bounty soft | **OK** |
-| Visual unlock max post-#15 · **L8** (vinyls/integrali) | **OK** live · playtest L8 **domani** |
+| Freeze carriera su `-qol` | **CHIUSO** — tutto in live |
+| Soft cash ×1.4 · bounty soft · Cost ×0.7 · FE-bars | **OK** |
+| Visual shop **L8** post-#15 · Cost **$0** | **OK** live · smoke aerografie **da confermare in gioco** |
 | A3 Junkman 7×2 · A4 sell 100% · pink drive | **OK** |
-| Sospesi / backlog QoL | **Nessuno** |
+| Backlog / sospesi QoL | **Nessuno** |
+| Nuova Release pack | **No** (fuori scope di questo punto fermo) |
 
 ---
 
@@ -26,16 +27,23 @@ Scopo: stesso loop carriera; meno grind/RNG/economia; libertà di spesa; gare/co
 | ID | Cosa | Live |
 |----|------|------|
 | S1 | Marker count **6** | ExOpts |
-| Visual | Unlock **L8** post-#15 · Cost **$0** (shop; non i 3 HUD unique) | OK · `10` |
+| Visual | Unlock **L8** post-#15 · Cost **$0** (shop; non i 3 HUD unique) | `gameplay` · `10` |
 | Soft Cost | Auto/perf **×0.7** + lotto FE-bars | `FE_ATTRIB` |
 | Soft cash | Gare/rival `CashValue` **×1.4** | `gameplay` · `12` |
 | Bounty | Soft ×0.85/0.75/0.65 | `gameplay` · `13` |
 | Garage | **25** | ExOpts |
 | A1 | Speciali in lotto; VNDRY **38** (no RX-8) | `14` |
 | Controlli | DualSense: ImproveGamepad**0**, DZ **28**, StickLook**0** | Widescreen |
-| A4 | Sell = **100% Cost** | `speed.exe` · `15` · playtest OK |
-| A3 | Junkman **7×2** (#15–#2, NOS×2); Razor no | `16` · Taz→chassis OK |
-| Pink drive | `UnlockedAt` auto pink-slip **≥ # rivale** | FE · Vic/Supra ecc. |
+| A4 | Sell = **100% Cost** | `speed.exe` · `15` |
+| A3 | Junkman **7×2** (#15–#2, NOS×2); Razor no | `16` |
+| Pink drive | `UnlockedAt` pink-slip **≥ # rivale** | FE · Vic/Supra ecc. |
+
+---
+
+## Unica verifica rimasta (non è backlog)
+
+Dopo Sonny (#15): aerografie **integrali** shop (tribal/fiamme, vinyls L7–8) devono apparire sbloccate a $0.  
+Implementazione già in live (`qol-visual-unlock-l8.nfsms`). Dettaglio: `10`.
 
 ---
 
@@ -43,14 +51,15 @@ Scopo: stesso loop carriera; meno grind/RNG/economia; libertà di spesa; gare/co
 
 | Voce | Decisione | Perché |
 |------|-----------|--------|
-| Pink rivali in Car Lot | **SCARTATO** | Livree via mod → compra auto + applica livrea; pink solo marker S1 |
-| Visual day-one | **SCARTATO** | Già unlock max post-#15 + $0 |
+| Pink rivali in Car Lot | **SCARTATO** | Livree via mod; pink solo marker S1 |
+| Visual day-one | **SCARTATO** | Già unlock L8 post-#15 + $0 |
 | Modello B (no UI marker) | **SCARTATO** | S1 basta |
 | A2 unlock mid anticipato | **SCARTATO** | Fasce perf vanilla |
 | UnlockAllThings = 1 | **SCARTATO** | Resta **0** |
-| Rank lotto TORQUE/MASS | **SCARTATO** | Sostituito da barre FE |
+| Rank lotto TORQUE/MASS | **SCARTATO** | Barre FE |
 | Junkman shop infinito | **SCARTATO** | A3 = stock 7×2 da marker |
-| Pack auto community | **FUORI SCOPE** | Progetto a parte (save/CARS) |
+| Pack auto community | **FUORI SCOPE** | Progetto a parte |
+| Pubblicare QoL in Release | **Non ora** | Solo docs + copia `-qol` locale |
 
 ---
 
@@ -58,18 +67,18 @@ Scopo: stesso loop carriera; meno grind/RNG/economia; libertà di spesa; gare/co
 
 | Ruolo | Path |
 |-------|------|
-| Originale | `...\nfs2005\nfsmw-2005-win11-it` |
-| QoL | `...\nfs2005\nfsmw-2005-win11-it-qol` |
-| Tool / backup | `...\nfs2005\qol-tools\` |
-| Docs | `qol-plan\` |
+| Pack originale (Release) | `...\nfs2005\nfsmw-2005-win11-it` |
+| Copia QoL | `...\nfs2005\nfsmw-2005-win11-it-qol` |
+| Tool / backup (fuori git) | `...\nfs2005\qol-tools\` |
+| Docs | `qol-plan\` (questo repo) |
 
-### Backup utili
+### Backup utili (`qol-tools\backups\`)
 
 | Backup | Cosa |
 |--------|------|
 | `20260921-reapply-cash-bounty\` | Pre re-apply cash/bounty |
-| `20260921-reapply-visual\` | Pre re-apply visual (+ installed) |
-| `20260921-vinyl-l8\` | Pre Visual **L8** (aerografie/integrali) |
+| `20260921-reapply-visual\` | Pre re-apply visual |
+| `20260921-vinyl-l8\` | Pre Visual **L8** |
 | `20260921-pink-unlockedat\` | `FE_ATTRIB` pre–pink UnlockedAt |
 | `20260921-a3-junkman-x2\` | Pre-pack A3 |
 | `20260921-a3-nos-smoke-*\` | Pre-Taz VNDRY |
@@ -77,7 +86,7 @@ Scopo: stesso loop carriera; meno grind/RNG/economia; libertà di spesa; gare/co
 | `20260921-lot-febars\` | FE pre–FE-bars |
 | economy / bounty / a1 `20260919-*` | Storico |
 
-**Pack rule:** non ripackare da YAML stale. `vlt-unpack` riallineato al live. Preferire `apply-script-bin` su `gameplay` corrente; copiare **solo** `gameplay.bin`/`.lzc`.
+**Pack rule:** non ripackare da YAML stale. Preferire `apply-script-bin` su `gameplay` corrente; copiare **solo** `gameplay.bin`/`.lzc`.
 
 ---
 

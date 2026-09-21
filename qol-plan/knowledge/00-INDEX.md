@@ -5,9 +5,9 @@ Visione condivisa e verificabile di MW 2005 carriera + QoL su `-qol`.
 | Ruolo | Doc |
 |-------|-----|
 | **Fonte di verità** | [`11-COHERENCE-FREEZE.md`](11-COHERENCE-FREEZE.md) |
-| Piano | [`../PLAN.md`](../PLAN.md) |
+| Piano / punto fermo | [`../PLAN.md`](../PLAN.md) |
 
-**Docs allineati:** 2026-09-21 — freeze **completo**; visual **L8** (vinyls/integrali) + re-apply; pink drive; sospesi **scartati**; **nessun backlog QoL**. Playtest aerografie L8 in sospeso.
+**Punto fermo 2026-09-21:** freeze **chiuso** in live; visual **L8**; A3/A4; pink drive; DualSense; sospesi **scartati**; **nessun backlog**. Release pack pubblica **non** aggiornata (resta v1.0.1). Unica verifica: smoke aerografie integrali post-Sonny.
 
 ---
 
@@ -15,7 +15,7 @@ Visione condivisa e verificabile di MW 2005 carriera + QoL su `-qol`.
 
 | Doc | Contenuto | Stato |
 |-----|-----------|--------|
-| `01`–`09` | Background / storico | — |
+| `01`–`09` | Background / storico | storico (vedi note in `06`/`08`) |
 | `10-VISUAL-UNLOCK-MAX.md` | Visual **L8** post-#15 + $0 | **OK** live |
 | `11-COHERENCE-FREEZE.md` | **Fonte di verità** | **FINITO** |
 | `12-ECONOMY-NUMBERS.md` | Cash ×1.4 · Cost ×0.7 | **OK** |
@@ -24,7 +24,7 @@ Visione condivisa e verificabile di MW 2005 carriera + QoL su `-qol`.
 | `15-A4-RESELL.md` | Sell 100% Cost | **OK** |
 | `16-A3-JUNKMAN-X2.md` | Junkman 7×2 | **OK** |
 | `04-DATI-E-TOOL.md` | Path / tool / pack rule | **Corrente** |
-| `dumps\` | CSV target | |
+| `dumps\` | CSV target lotto | **OK** |
 
 ---
 
@@ -48,6 +48,7 @@ Visione condivisa e verificabile di MW 2005 carriera + QoL su `-qol`.
 
 ## Prossimo
 
-Niente in backlog QoL. Idee nuove = nuovo scope.
+Niente in backlog QoL. Smoke L8 aerografie = conferma utente, non nuovo lavoro.  
+Idee nuove = nuovo scope. Release pack QoL = decisione separata.
 
 Se un doc contraddice `11` → vince `11`.

@@ -1,6 +1,9 @@
 # Solo documentazione in questo repo.
 # Il pack di gioco va nelle Releases (archivi multi-volume).
 
+# QoL tools / backup / save locali (fuori dal pack pubblico)
+qol-tools/
+
 # Archivi / build locali
 dist/
 release/
