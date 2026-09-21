@@ -16,17 +16,17 @@ release/
 *.rar
 *.part
 
-# Mai versionare il gioco / redistributable del pack
+# Mai versionare il gioco / redistributable del pack (root pack, non docs)
 speed.exe
 dinput8.dll
-scripts/
-CARS/
-TRACKS/
-SOUND/
-MOVIES/
-Tools/
-CREDITS/
-_CommonRedist/
+/scripts/
+/CARS/
+/TRACKS/
+/SOUND/
+/MOVIES/
+/Tools/
+/CREDITS/
+/_CommonRedist/
 *.big
 *.bun
 *.bin
