@@ -22,21 +22,20 @@ Quando batti un boss, il bin ha già `unlocks/upgrade_*` (es. freni/motore livel
 
 ## 2. Junkman (marker “Unique Performance”)
 
-- Tipi di boost: freni, sospensioni, trasmissione, turbo/supercharger, gomme, motore, (NOS quasi assente in carriera).
-- In carriera i **drop sono pochi**: freni **solo** Sonny, motore **solo** JV; altri tipi si ripetono di più.
-- Sono **stock limitato**: li metti su **poche** auto (spesso “abbasti per una macchina quasi full”, non per tutto il garage).
-- **Non** sono “sblocco negozio per sempre a listino”: prendi il pezzo (Back Room) e lo usi.
-
-Quindi sì: la tua lettura è corretta — **non** è un catalogo infinito; è un bonus scarso.
+- Tipi: freni, chassis, trasmissione, induction, gomme, motore, **NOS**.
+- **QoL A3** (`16`): **2 pezzi × 7 tipi** su Blacklist #15–#2 (14 drop); Razor senza Junkman. NOS a #10 e #5.
+- Restano **stock da marker** (Back Room), non shop infinito.
+- Con **S1** li prendi tutti (niente miss RNG).
 
 ---
 
-## 3. Marker estetica / “unique part” (vinyl, rim, hood, spoiler speciali…)
+## 3. Marker estetica / “unique part” (HUD / pezzi one-off)
 
-- **Sì**, sono pezzi **unici** (non il listino body kit normale).
+- Pezzi **unici** da reward marker (es. **3 HUD** su #13/#9/#2) — **non** il listino shop.
+- **Non** confondere con le aerografie **integrali** (tribal, fiamme, …): quelle sono **vinyls di listino** su tutte le auto; QoL le sblocca a **L8** post-#15 (`10`), non via marker.
 - Quantità limitata / legati a quel reward.
 - Molti unique visual, se non li prendi, in vanilla diventano disponibili **dopo Razor** in shop.
-- Con il nostro piano **listino visual già tutto subito + gratis**, questi unique sono solo “extra cosmetici”, non il grosso del feel “faccio la macchina come voglio”.
+- Con listino visual **L8 + $0**, i marker unique restano solo extra (HUD gated = decisione 2026-09-21).
 
 ---
 
@@ -56,7 +55,7 @@ Batti boss
  ├── già automatico: unlock pezzi NORMALI in shop (fasce)
  └── marker (scegli 2/6):
       ├── pink slip        → auto rivale
-      ├── Junkman          → 1 pezzo scarso (potenza extra)
+      ├── Junkman          → stock A3 7×2 (potenza extra; non infinito)
       ├── unique visual    → cosmetica unica
       └── consumabili      → cash / jail / impound
 ```

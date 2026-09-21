@@ -1,9 +1,15 @@
 # Bounty soft — progressiva (**APPLICATO**)
 
-Data: 2026-09-19  
+Data: 2026-09-19 · re-apply live **2026-09-21**  
 Campo: `RequiredBounty` su `race_bin_XX` in `gpcore` (gameplay VLT).  
-Backup: `qol-tools\backups\20260919-bounty-soft\`  
+Script: `qol-tools\scripts\qol-bounty-soft.nfsms`  
+Backup pre re-apply: `qol-tools\backups\20260921-reapply-cash-bounty\`  
 **Win / milestones: vanilla** (non toccati).
+
+### Stato live
+
+**OK** — es. #15 = **17 000**, #14 = **42 500**, #1 = **6 500 000**.  
+Re-apply con `apply-script-bin` sul gameplay che già conteneva A3 (Junkman preservato).
 
 ## Perché progressiva
 

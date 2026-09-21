@@ -1,112 +1,72 @@
 # Economia, shop, unlock pezzi
 
-> **Background + vanilla tipici.** Numeri QoL: `12-ECONOMY-NUMBERS.md`, bounty `13-BOUNTY-SOFT.md`.  
-> Starter QoL tipici: cobalt ~18k, punto/is300 ~19k, gti ~24.5k (non più 26–35k vanilla).
+> **Background + contesto vanilla.** Numeri QoL live: [`12-ECONOMY-NUMBERS.md`](12-ECONOMY-NUMBERS.md), bounty [`13`](13-BOUNTY-SOFT.md), vendita [`15`](15-A4-RESELL.md), freeze [`11`](11-COHERENCE-FREEZE.md).  
+> Listino corrente: `dumps/cars-lot-fe-bars.csv`.
 
 ## Soldi — da dove arrivano
 
 | Fonte | Note |
 |-------|------|
-| Vittorie gare | Cash fisso per evento (sale salendo di Blacklist). Early tipico ~1.5–4k; late molto di più |
-| Rival Challenge | Cash dedicato (es. Sonny ~5k … Bull ~75k) |
-| Marker bonus cash | Uno dei possibili `?` |
-| Extra Options | `StartingCash`, `AwardedCash` (NFSU2) — leve grossolane |
+| Vittorie gare | `CashValue` — QoL **×1.4** |
+| Rival Challenge | Cash dedicato — QoL **×1.4** |
+| Marker bonus cash | Pool S1 (count=6) — `CashReward` vanilla |
+| Extra Options | `StartingCash`, `AwardedCash` (NFSU2) |
 
-Le gare si possono **rifare** per farmare cash (vanilla lo permette): il grind soldi esiste ma non è l’unico collo di bottiglia.
+Le gare si possono **rifare** per farmare cash (vanilla).
 
-## Costi tipici (ordini di grandezza da guide — da verificare in dati)
+## Costi
 
-### Starter (post-prologo, ~30k in tasca)
+### Starter / Car Lot
 
-- Cobalt SS / Punto / IS300 / Golf GTI ecc.: circa **26–35k** → la prima auto ti mangia quasi tutto il budget.
+Vanilla ~26–35k con ~30k in tasca. QoL: soft ×0.7 poi **rank barre FE** (`14`).
 
-### Performance shop (esempi wiki Engine — da riconfermare)
+### Performance shop
 
-| Fascia | Esempio costo Engine | Unlock tipico |
-|--------|----------------------|---------------|
-| Race | ~5.5k | Early / da subito |
-| Pro | ~14k | dopo certi rivali (es. ~#12) |
-| Super Pro | ~30k | mid (es. ~#7) |
-| Ultimate | ~100k | late (es. ~#3) |
+Unlock fasce **vanilla**. QoL: Cost **×0.7** (`12`).
 
-Altre categorie (turbo, trasmissione, sospensioni, pneumatici, freni, NOS…) seguono la stessa logica a **scaglioni legati alla Blacklist**.
+### Visual
 
-→ Allineato a ciò che volevi: **performance a passo passo** è già design vanilla; QoL soft = forse prezzi meno punitivi / fasce un filo prima, **non** Ultimate gratis day-one.
+Unlock **L8** **post-#15**, Cost **$0** (`10`). Copre tutto il listino shop fino a FE `LEVEL_08` (aerografie **integrali** tribal/fiamme = vinyls shop, **non** unique da marker). I **3** HUD unique restano da marker.
 
-### Visual / carrozzeria
+## Car Lot — sblocchi rivale (community / vanilla)
 
-- Kit, spoiler, cerchi, vinyl, paint, ecc. hanno **unlock di carriera** (e pezzi unique da marker).
-- Molti unique visual non presi nei marker tornano disponibili **post-Razor**.
-- Tua direzione QoL: **estetica sempre aperta** = intervenire su unlock visual (non sulla difficoltà di guida).
+Batti un rivale → sblocchi **auto comprabili** (≠ pink slip). Esempi:
 
-## Car Lot — sblocchi per rivale (sintesi community)
-
-Batti un rivale → sblocchi **auto comprabili** (non è la pink slip). Esempi tipici:
-
-| Dopo | Sblocchi lotto (esempi) |
-|------|-------------------------|
-| #15 Sonny | Audi A3, Audi TT (+ pink: Golf GTI Sonny) |
-| #14 Taz | Audi A4, Eclipse GT |
-| #13 Vic | CTS, Clio V6 |
-| #12 Izzy | Mustang, RX-8, Supra |
-| … | … fino a hypercar late |
-| #1 Razor | M3 GTR storia (percorso finale) |
-
-Lista completa da consolidare in una tabella “fonte unica” quando estrarremo i vault.
-
-## Premi gare early (esempi guida PapaGamer)
-
-Intorno a Sonny/Taz: molte gare a **1.5k–2.5k**.  
-Rival Sonny **5k**.  
-Con auto da ~30k e upgrade Race, i soldi early sono **stretti** di proposito: è il feel 2005.
-
-## Limiti “economia nascosta”
-
-- Max auto acquistabili (~10) → influenza rotazione heat. QoL: **25**.
-- Multe / busted / riparazioni → drenano cash se giochi aggressivo con i cops (gameplay: da non snervare se vogliamo tenere la tensione).
-- **Vendita auto (vanilla):** ≈ **50%** del `Cost` stock FE; upgrade perf non contano. QoL target A4: **100% Cost** — vedi `15-A4-RESELL.md` (serve ASI, non VLT).
-
-## Cosa ancora manca nella knowledge (todo ricerca)
-
-- [ ] Tabella prezzi **tutte** le auto Car Lot dal file
-- [ ] Tabella prezzi **tutti** i pezzi performance/visual
-- [ ] Cash esatto per ogni evento / rival
-- [ ] Mapping preciso unlock pezzo ↔ Blacklist #
-- [ ] Conferma contenuti marker per ogni #15→#1
-
-Fino a qui: abbastanza per **capire il sistema**; non ancora abbastanza per fissare moltiplicatori “soft” con sicurezza.
-
----
-
-## Junkman (performance unique da marker) — spiegazione
-
-Non è uno “sblocco anticipato” delle fasce Race/Pro/Ultimate.
-
-| | Shop normale | Junkman |
-|--|--------------|---------|
-| Cosa | Pezzi di fascia (Race→…→Ultimate) | Pezzo **extra** che si **stacka sopra** qualsiasi fascia |
-| Come | Compra in shop quando sbloccato | Marker “Unique Performance” dopo un boss → poi Back Room (tasto 1 in negozio) |
-| Quantità | Illimitato (se hai soldi) | **Stock limitato** in carriera (pochi pezzi totali) |
-| Se salti il marker | Non perdi la fascia shop | **In quella run** quel pezzo Junkman spesso **non torna** |
-
-Lista tipica (fissa per boss, non random sul tipo):
-
-| Boss | Junkman tipico |
+| Dopo | Esempi lotto |
 |------|----------------|
-| #15 Sonny | Freni (**unico** drop freni in carriera) |
-| #14 Taz | Sospensioni |
-| #13 Vic | Trasmissione |
-| #12 Izzy | Supercharger/Turbo |
-| #11 Big Lou | Gomme |
-| … | (ripetizioni: tante sospensioni/turbo/gomme) |
-| #4 JV | Motore (**unico** drop motore) |
-| #1 Razor | Nessun marker Junkman |
+| #15 Sonny | A3, TT (+ pink GTI) |
+| #14 Taz | A4, Eclipse GT |
+| #12 Izzy | Mustang, RX-8, Supra |
+| Late | Hypercar |
+| #1 Razor | M3 GTR storia |
 
-Conseguenza vanilla: **Engine e Brakes una sola volta** → in carriera non puoi “Junkman-full” tante auto; se non prendi quel marker, ti sei perso quel pezzo per la run.
+**Cost/`UnlockedAt` QoL** = dump febars, non i prezzi vanilla guida.  
+**Pink slip:** `UnlockedAt` forzato **≥ # rivale** (es. Vic/Supra → 13) così guidi subito dopo il marker.
 
-Junkman **non** sblocca Pro/Ultimate prima: rende un’auto già upgradata **ancora più forte** (barre piene ≈ Ultimate + set Junkman).
+## Limiti economia
 
-**Decisione QoL Junkman (aggiornata):** non serve shop infinito. Con **S1** (`SelectableMarkerCount = 6`) prendi ogni drop Junkman → stock vanilla basta per **una** auto full (meno NOS).
+| Voce | QoL |
+|------|-----|
+| Max auto garage | **25** |
+| Multe / busted | Vanilla |
+| **Vendita auto** | **100% Cost** (A4) — vanilla ≈50%; perf non rimborsate |
 
+## Junkman
 
+Pezzo **extra** da marker (Back Room), stock limitato; **non** anticipa fasce shop.  
+Con **S1** ogni Junkman è prendibile. QoL **A3**: **2 pezzi × 7 tipi** su #15–#2 (dettaglio `16`).
 
+| # | Tipo |
+|---|------|
+| 15 / 3 | brakes |
+| 14 / 9 | chassis |
+| 13 / 8 | transmission |
+| 12 / 6 | induction |
+| 11 / 7 | tires |
+| 10 / 5 | **nos** |
+| 4 / 2 | engine |
+| 1 | nessuno |
+
+## Riferimenti
+
+`11` freeze · `12` numeri · `13` bounty · `14` lotto · `15` sell · `16` Junkman · `04` path/tool

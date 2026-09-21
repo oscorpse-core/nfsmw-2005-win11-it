@@ -1,40 +1,53 @@
 # Knowledge — indice
 
-Scopo: visione condivisa e verificabile di MW 2005 carriera + QoL applicato.  
-**Freeze canonico:** [`11-COHERENCE-FREEZE.md`](11-COHERENCE-FREEZE.md)  
-**Piano:** [`../PLAN.md`](../PLAN.md)
+Visione condivisa e verificabile di MW 2005 carriera + QoL su `-qol`.
 
-Stato docs: allineati a `-qol` (2026-09-19) — freeze + A1; A4 discovery.
+| Ruolo | Doc |
+|-------|-----|
+| **Fonte di verità** | [`11-COHERENCE-FREEZE.md`](11-COHERENCE-FREEZE.md) |
+| Piano | [`../PLAN.md`](../PLAN.md) |
 
-| Doc | Contenuto | Note |
-|-----|-----------|------|
-| `01-CAREER-LOOP.md` | Loop Blacklist | Vanilla + bounty soft |
-| `02-MARKERS-E-PINK-SLIP.md` | Marker / pink | Decisione = S1 |
-| `03-ECONOMIA-E-SHOP.md` | Economia / shop | Background; numeri 12/13 |
-| `04-DATI-E-TOOL.md` | Path + Extra Options | |
-| `05-DISCOVERY.md` | Discovery v1 | Storico |
-| `06-LOGIC-REVIEW.md` | Logiche → S1 | B sospeso |
-| `07-TECH-MODEL-B.md` | Modello B | **Sospeso** |
-| `08-MARKERS-CLARIFIED.md` | Unlock vs marker vs Junkman | |
-| `09-VERIFY-POST-PACK.md` | Post-pack visual | Storico |
-| `10-VISUAL-UNLOCK-MAX.md` | Visual unlock + $0 | **Applicato** |
-| `11-COHERENCE-FREEZE.md` | **Fonte di verità** | |
-| `12-ECONOMY-NUMBERS.md` | Cash/auto/perf soft | **Applicato** |
-| `13-BOUNTY-SOFT.md` | Bounty progressiva | **Applicato** |
-| `14-A1-SPECIALS-CARLOT.md` | Speciali Car Lot | **Applicato** (playtest) |
-| `15-A4-RESELL.md` | Vendita auto = Cost | Discovery — ASI |
-| `dumps\` | CSV | |
+**Docs allineati:** 2026-09-21 — freeze **completo**; visual **L8** (vinyls/integrali) + re-apply; pink drive; sospesi **scartati**; **nessun backlog QoL**. Playtest aerografie L8 in sospeso.
 
-### Distinzione critica
+---
 
-| Cosa | Come (QoL attuale) |
-|------|---------------------|
-| Auto lotto normali | `UnlockedAt` + Cost soft |
-| Auto speciali (A1) | In lotto; unlock a **tier**; near-max con prezzo alto; **no pink** |
-| Auto rivale (pink) | S1 marker |
-| Visual | Post-#15, $0 |
-| Performance | Fasce vanilla; Cost soft |
-| Junkman | S1; stock ~1 auto |
-| Vendita auto | Vanilla ~50% Cost → A4 vuole 100% (ASI) |
+## Mappa documenti
 
-Pink slip senza RNG = **S1**.
+| Doc | Contenuto | Stato |
+|-----|-----------|--------|
+| `01`–`09` | Background / storico | — |
+| `10-VISUAL-UNLOCK-MAX.md` | Visual **L8** post-#15 + $0 | **OK** live |
+| `11-COHERENCE-FREEZE.md` | **Fonte di verità** | **FINITO** |
+| `12-ECONOMY-NUMBERS.md` | Cash ×1.4 · Cost ×0.7 | **OK** |
+| `13-BOUNTY-SOFT.md` | Bounty progressiva | **OK** |
+| `14-A1-SPECIALS-CARLOT.md` | Speciali + lotto FE-bars | **OK** |
+| `15-A4-RESELL.md` | Sell 100% Cost | **OK** |
+| `16-A3-JUNKMAN-X2.md` | Junkman 7×2 | **OK** |
+| `04-DATI-E-TOOL.md` | Path / tool / pack rule | **Corrente** |
+| `dumps\` | CSV target | |
+
+---
+
+## QoL live (una riga)
+
+| Cosa | Live |
+|------|------|
+| Listino | Soft + rank barre FE; pink-slip `UnlockedAt` ≥ # rivale |
+| Save | 38 auto (no RX-8) |
+| Marker | S1 = 6 |
+| Visual | post-#15, **L8**, $0 (shop; 3 HUD unique restano marker) |
+| Perf | fasce vanilla; Cost ×0.7 |
+| Premi | CashValue **×1.4** |
+| Bounty | soft progressiva |
+| Garage | 25 |
+| Vendita | 100% Cost (A4) |
+| Controlli | DualSense Widescreen fix |
+| Junkman | A3 7×2 |
+
+---
+
+## Prossimo
+
+Niente in backlog QoL. Idee nuove = nuovo scope.
+
+Se un doc contraddice `11` → vince `11`.

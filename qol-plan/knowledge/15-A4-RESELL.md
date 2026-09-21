@@ -1,54 +1,74 @@
 # A4 — Resell / vendita auto
 
-Data: 2026-09-19  
-Target utente: **prezzo vendita = Cost d’acquisto** (listino FE). Perf investita: *nice later*; per ora basta 100% Cost.
+Data: **2026-09-21** · **OK** su `-qol` (verifica statica; v2)  
+Target: **vendita = 100% Cost** FE (listino). Perf investita: fuori scope v1.
 
 ---
 
-## Vanilla (confermato)
+## Vanilla
 
-- Tutorial EN in `LANGUAGES\English.bin`: i dealer danno **metà** del prezzo stock originale.  
-- Upgrade performance **non** aumentano il sell; soldi pezzi persi (visual: trick downgrade→credito, non per perf).  
-- Community / guide: ≈ **50%** del `Cost` FE.
+- I dealer pagano **metà** del prezzo stock.  
+- Gli upgrade performance **non** aumentano il sell.  
+- Logica: `AwardCash(GetCost() / 2)` + UI dialog `GetCost() / 2`  
+  (decomp `uiQRCarSelect.cpp`; stessa su PC v1.3).
 
-## Cosa abbiamo cercato
+---
+
+## Perché non VLT / ExOpts
 
 | Dove | Risultato |
 |------|-----------|
-| `fe_attrib` / schema Attribulator | Solo `Cost` — **nessun** Resale/Sell% |
-| Extra Options ini / readme | **Nessuna** leva sell |
-| `speed.exe` stringhe SellCar/SellPrice | Assenti; ~428 float `0.5` (non isolabile a caso) |
-| ShowAllCars / Unlimiter | Non installati; non risolvono sell |
-
-→ **Non implementabile con solo pack VLT** (stesso metodo di economia/A1).
+| `fe_attrib` | Solo `Cost` — niente Resale% |
+| Extra Options | Nessuna leva sell |
+| Path QoL | Patch mirata `speed.exe` (4 byte) |
 
 ---
 
-## Path implementazione
+## Patch PC (`speed.exe` v1.3, ImageBase `0x400000`)
 
-1. **ASI hook** (preferito): intercettare calcolo sell → `return Cost` (o `Cost * 1.0f` invece di `0.5f`).  
-   - Loader già presente (ExOpts / WidescreenFix in `scripts\`).  
-   - Serve reverse mirato su funzione sell (stringhe UI `Sell Car` / `trade this car in for %s` come ancore).  
-2. **Patch binaria** `speed.exe` — fragile su versioni / checksum.  
-3. Workaround dati: **no** (raddoppiare Cost rompe l’acquisto).
+| Ruolo | VA | Vanilla | Patch |
+|-------|-----|---------|-------|
+| Award cash alla vendita | `0x7C1F65` | `D1 E8` (`shr eax,1`) | `90 90` |
+| Importo nel dialog conferma | `0x7C2351` | `D1 E8` | `90 90` |
+
+Ancore UI (stesso cluster): confirm `0xA46253BA`, stringa `0xB4A40135`, can’t-sell-only `0x9A772BD6`.
+
+Diff totale vs vanilla: **esattamente 4 byte**. Non tocca input/pad/camera.
+
+---
+
+## Storia breve
+
+1. Prima patch → rollback (sintomi pad).  
+2. Causa pad = DualSense + Widescreen (`ImproveGamepadSupport`), **non** A4.  
+3. Controlli OK → **v2** riapplicata.  
+4. Backup pre-A4: `qol-tools\backups\20260921-a4-resell-v2\speed.exe` (MD5 vanilla `C0516B48…`).
+
+---
+
+## Verifica statica (2026-09-21)
+
+| Check | Risultato |
+|-------|-----------|
+| Diff vs vanilla | **4 byte** |
+| Siti `/2` | `D1 E8` → `90 90` (award + dialog) |
+| Context | sell hash → GetCost → NOP → add cash / format UI |
+| Decomp | `GetCost()/2` senza shift = **100% Cost** |
+
+→ **A4 OK** senza bisogno di entrare in game. Smoke opzionale.
 
 ## Decisione
 
 | Voce | Scelta |
 |------|--------|
-| Target v1 | Sell = **100% Cost** FE |
-| Perf nel sell | Fuori scope v1 |
-| Pink / speciali | Stessa formula sul loro Cost |
-| Stato | Discovery **chiusa** · impl **in coda ASI** |
-
-## Playtest (quando ASI pronto)
-
-1. Compra auto a Cost X → vendi → cash +X  
-2. Auto upgradata → ancora solo +X (v1)  
-3. Ultima auto in garage → soft-lock sell vietato (vanilla resta)
+| Target v1 | Sell = **100% Cost** |
+| Perf nel sell | No |
+| Pink / speciali | Stesso Cost FE |
+| Stato | **OK** (static) |
 
 ## Non fare
 
-- Toccare originale  
-- Patch exe a caso sui 428× `0.5`  
-- Promettere sell+perf senza hook che legga pezzi installati
+- Toccare la copia originale  
+- Patch random sui ~428 float `0.5`  
+- Promettere rimborso pezzi senza hook pezzi  
+- Rollback Widescreen se i controlli stanno bene

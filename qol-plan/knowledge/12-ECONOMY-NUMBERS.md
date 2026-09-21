@@ -1,22 +1,33 @@
 # Economia — dump + numeri soft (**APPLICATO**)
 
-Data: 2026-09-19  
+Data: 2026-09-19 · lotto **2026-09-21** · sell **A4** · cash re-apply **2026-09-21**  
 Dump: `dumps\*.csv`  
-Stato: **scritto su `-qol`** (backup `qol-tools\backups\20260919-economy-soft\`).  
-Playtest: prezzi auto/perf OK; cash gare da verificare su eventi nuovi.
+`cars-proposed.csv` = soft ×0.7 storico; **listino Cost/Unlock corrente** = `cars-lot-fe-bars.csv`.
+
+### Stato live (`-qol`)
+
+| Voce | Live |
+|------|------|
+| Auto / perf **Cost** (FE) | **OK** soft |
+| Lotto FE-bars | **OK** |
+| A4 sell | **OK** (`speed.exe`) |
+| Premi `CashValue` ×1.4 | **OK** (re-apply via `qol-economy-cash.nfsms`) |
+| Bounty soft | **OK** — `13` |
 
 ---
 
-## Moltiplicatori
+## Moltiplicatori (live)
 
 | Voce | Formula | Note |
 |------|---------|------|
-| Premi gare + rival (`CashValue`) | **×1.4** + arrotondamento | `race_bin_*` con CashValue > 0 |
+| Premi gare + rival (`CashValue`) | **×1.4** + arrotondamento | `dumps/cashvalue-proposed.csv` · script `qol-economy-cash.nfsms` |
 | Marker `CashReward` | **Vanilla** | S1 li prende già tutti |
-| Performance `Cost` > 0 | **×0.7** + arrotondamento | Unlock fasce vanilla |
-| Auto Car Lot | **×0.7** + smoothing per `UnlockedAt` | Outlier bucket → ~1.35× mediana |
+| Performance `Cost` > 0 | **×0.7** + arrotondamento | **OK** in `FE_ATTRIB` |
+| Auto Car Lot | Soft ×0.7; **poi** rank barre FE | **OK** · `14` · febars CSV |
+| Pink-slip `UnlockedAt` | **≥ # rivale** | **OK** · `14` (es. Vic/Supra → 13) |
+| **Vendita auto (A4)** | **100% Cost** FE | **OK** · `15` |
 | Start / multe | Vanilla | — |
-| Bounty | Vedi `13-BOUNTY-SOFT.md` (progressiva, non ×0.7 fisso) | |
+| Bounty | `13` progressiva | **OK** |
 
 Arrotondamento: &lt;10k → multipli di 100; ≥10k → multipli di 500.
 
@@ -94,5 +105,7 @@ Marker CashReward (Sonny 10k, ecc.) = **non modificati**.
 
 ## Fuori da questo file
 
-- Bounty → **fatto** in `13-BOUNTY-SOFT.md`
-- Unlock timing auto / fasce performance → **vanilla** (non soft)
+- Bounty → `13-BOUNTY-SOFT.md` (**CHIUSO**)
+- Lotto Cost/Unlock corrente → `14` + `dumps/cars-lot-fe-bars.csv` (**CHIUSO**)
+- Vendita auto → `15-A4-RESELL.md` (**APPLICATO**)
+- Unlock timing fasce performance → **vanilla** (non soft)

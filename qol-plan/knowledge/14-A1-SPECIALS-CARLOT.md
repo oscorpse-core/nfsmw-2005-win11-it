@@ -1,45 +1,62 @@
-# A1 — Speciali in Car Lot (**APPLICATO**)
+# Lotto Car Lot — speciali + calibrazione barre FE
 
-Data: 2026-09-19 (perf audit + retune)  
-Copia: `-qol`  
-Backup: `qol-tools\backups\20260919-a1-specials-perfprice\` (+ unlock/cost precedenti)
+Data: **2026-09-21** · **CHIUSO** (ordine confermato in game)  
+Copia: `-qol` · Freeze: [`11-COHERENCE-FREEZE.md`](11-COHERENCE-FREEZE.md)  
+Backup FE: `qol-tools\backups\20260921-lot-febars\`  
+Barre: [`dumps/cars-lot-fe-bars.csv`](dumps/cars-lot-fe-bars.csv)  
+Griglia: [`dumps/cars-lot-perf-calibrated.csv`](dumps/cars-lot-perf-calibrated.csv)
 
-## Audit performance
+---
 
-| Auto | Customizable | Engine `_top` | Torque vs peer | Lettura |
-|------|--------------|---------------|----------------|---------|
-| camaro | **false** | no | ~112% mustang stock / **58%** ult | Fisso, poco sopra stock |
-| sl65 | **false** | no | ~**90%** viper Ultimate | **Quasi max** fisso |
-| corvettec6r | **false** | no | ~**90%** corvette Ultimate | **Quasi max** fisso |
-| 911gt2 | **false** | no | ~**80%** 911turbo Ultimate | Forte, quasi top |
-| m3_gtr / e46 | **false** | no | pacchetto unico hyper | Fisso late |
-| m3 | **true** | (n/d street) | upgradeabile | Stock path |
-| rx8speed | **true** | — | upgradeabile | Stock path |
+## Stato
 
-`m3gtre46careerstart` = solo prologo (più debole); non è il listino E46.
+| Voce | |
+|------|--|
+| Speciali in FE (no pink) | OK |
+| Rank Cost/Unlock su **TS+Acc+Han** wiki | OK pack + OK in game |
+| Save VNDRY | **38** auto (Camaro, C6.R, SL65, GT2, M3, M3 GTR; no RX-8) |
+| Proxy torque/mass | **Deprecato** |
+| Vendita listino | Stesso Cost FE → A4 dà **100%** (`15`) |
+| Pink-slip drive | `UnlockedAt` **≥ # rivale** (batti → guidi subito) — OK 2026-09-21 |
 
-## Prezzi / unlock (dopo retune)
+---
 
-| Auto | Cost | Unlock | Note |
-|------|------|--------|------|
-| rx8speed | 32000 | 9 | customizable — invariato |
-| camaro | **40000** | **10** | fisso mild |
-| m3 | 55000 | 7 | customizable — invariato |
-| sl65 | **145000** | **3** | quasi-ult |
-| corvettec6r | **165000** | **3** | quasi-ult |
-| 911gt2 | **160000** | **2** | forte fisso |
-| m3_gtr | 280000 | 2 | ok |
-| m3_gtre46 | 350000 | 2 | ok |
+## Metodo (canonico)
 
-## Playtest
+1. Score = TopSpeed + Acceleration + Handling (0–10, barre negozio).  
+2. Fonte: [NFS Encyclopedia – MW Cars](https://needforspeed.miraheze.org/wiki/Need_for_Speed:_Most_Wanted_(2005)/Cars).  
+3. Soft: stesso multiset Cost/`UnlockedAt`, riassegnato per rank (debole→early/cheap).  
+4. Proxy solo se assenti in wiki: `m3`, `m3_gtre46`, `rx8speed` (colonna `Source` nel CSV).  
+5. **Override pink:** per ogni auto pink-slip, `UnlockedAt = max(rank_febars, #rivale)` così non resti bloccato dopo il marker (es. Vic/Supra: era 11 → **13**).
 
-**Importante:** il catalogo Car Lot è fissato alla **creazione del salvataggio**.  
-Su un save già iniziato resti a **32** auto anche se `FE_ATTRIB` ha i speciali.  
-→ Serve una **carriera nuova** sulla copia `-qol` (dopo questo patch).
+### Check (confermati utente)
 
-1. Nuova carriera → contare auto in lotto (attese **>32**, tipicamente ~37–40 sbloccabili col progress)  
-2. Mid: Camaro (@#10) / RX-8 Speed (@#9) / M3 (@#7)  
-3. Late: SL65 / C6.R (@#3), GT2 / GTR (@#2) — già near-max  
-4. Se ancora 32 dopo new save → prova `ShowAllCarsInFE = 1` (solo new save; può mostrare anche auto debug/cop)  
+| Auto | Score | Unlock | Cost |
+|------|------:|-------:|-----:|
+| Punto | 1.2 | 16 | 19000 |
+| Supra | 6.1 | **13** (pink Vic) | 24500 |
+| C6.R | 27.5 | 2 | 210000 |
 
-Pink non toccate.
+---
+
+## Speciali A1 (FE)
+
+In listino rank con le altre. Su VNDRY: 6 (RX-8 Speed solo FE).  
+Near-max fisse (C6.R, SL65, GT2, …): `IsCustomizable` false — non sono “base maxata”.
+
+### Save: speciali nascoste
+
+Flag entry unlock: `20` = nascosta, `01` = in lotto. Edit → ricalcolare **MD5** `[0x34 .. len-16)`.
+
+---
+
+## Audit performance (storico A1)
+
+| Auto | Customizable | Lettura |
+|------|--------------|---------|
+| camaro | false | Fisso mild |
+| sl65 / c6r / 911gt2 | false | Quasi max fisso |
+| m3_gtr / e46 | false | Race fisso |
+| m3 / rx8speed | true | Path upgrade |
+
+Prezzi/unlock **attuali** = CSV febars, non tabelle soft A1 vecchie.
