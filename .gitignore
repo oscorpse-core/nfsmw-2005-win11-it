@@ -40,3 +40,6 @@ Desktop.ini
 *.log
 .vscode/
 .idea/
+
+# Agent / Cursor project layer — keep in git (do NOT ignore)
+# .cursor/ and agent/ are versioned on purpose.

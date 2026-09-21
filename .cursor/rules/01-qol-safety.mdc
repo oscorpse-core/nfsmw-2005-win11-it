@@ -1,0 +1,13 @@
+﻿---
+description: QoL safety — only -qol, sacred vanilla, no UnlockAllThings as fix
+alwaysApply: true
+---
+
+# QoL safety
+
+- Edit **only** `...\nfsmw-2005-win11-it-qol`. Never the original pack folder.
+- Backup under `...\qol-tools\backups\` before binary/save edits.
+- Do **not** soften cops, heat, win conditions, milestones, or performance **unlock bands**.
+- `UnlockAllThings` stays **0** — never use it as a unlock fix.
+- Shop visual max is not marker uniques (keep 3 reward_hud gated unless user reopens that decision).
+- Paths and touch map: `agent/CANON.md`.

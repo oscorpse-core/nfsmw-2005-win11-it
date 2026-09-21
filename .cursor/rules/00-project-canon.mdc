@@ -1,0 +1,13 @@
+﻿---
+description: Project canon — dual audience, freeze wins, no transcript search, IT chat
+alwaysApply: true
+---
+
+# Project canon
+
+- **User chat:** Italian. **Agent docs** (`AGENTS.md`, `agent/`, `.cursor/`): English.
+- **Public README / RELEASE_NOTES:** Italian user-first — do not rewrite the install manual into English.
+- QoL product truth: `qol-plan/knowledge/11-COHERENCE-FREEZE.md` wins on conflicts.
+- Start relevant work from `AGENTS.md` → `agent/SITUATIONS.md`.
+- Do **not** search prior Cursor conversations/transcripts unless the user explicitly asks.
+- Freeze QoL (2026-09-21) is **CLOSED**; do not invent backlog. Closed decisions: `agent/DECISIONS-CLOSED.md`.

@@ -1,0 +1,10 @@
+﻿---
+description: Git and Release gates — no commit/push/release unless user explicitly asks
+alwaysApply: true
+---
+
+# Git / Release gates
+
+- Do **not** `git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>"`, `git push`, or create/upload GitHub Releases unless the user **explicitly** asks.
+- Do not commit `qol-tools/`, game binaries, `speed.exe`, or save files.
+- Public Release playbook: `agent/playbooks/10-public-release-assets.md` — QoL not in v1.0.1 unless decided.

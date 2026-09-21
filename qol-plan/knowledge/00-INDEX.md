@@ -6,6 +6,7 @@ Visione condivisa e verificabile di MW 2005 carriera + QoL su `-qol`.
 |-------|-----|
 | **Fonte di verità** | [`11-COHERENCE-FREEZE.md`](11-COHERENCE-FREEZE.md) |
 | Piano / punto fermo | [`../PLAN.md`](../PLAN.md) |
+| **Agent Cursor (EN)** | [`../../AGENTS.md`](../../AGENTS.md) · indice knowledge → agent: [`../../agent/KNOWLEDGE-INDEX.md`](../../agent/KNOWLEDGE-INDEX.md) |
 
 **Punto fermo 2026-09-21:** freeze **chiuso**; visual **L8** + save coerente (playtest OK); A3/A4; pink drive; DualSense; sospesi **scartati**; **nessun backlog**. Pack pubblico resta **v1.0.1** (QoL solo `-qol` + docs) finché non si decide una Release dedicata.
 

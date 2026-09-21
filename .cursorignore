@@ -1,0 +1,7 @@
+﻿# Noise for Cursor indexing — do NOT ignore agent/, .cursor/rules, qol-plan/
+dist/*.log
+dist/*.7z*
+*.7z
+*.7z.001
+*.7z.002
+.git/cursor/

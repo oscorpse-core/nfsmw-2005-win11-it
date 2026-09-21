@@ -1,0 +1,13 @@
+﻿---
+description: Pack/bin discipline — no stale YAML pack; copy only intended bins
+alwaysApply: true
+---
+
+# Pack and bin discipline
+
+- Do **not** repack from stale YAML. Prefer `apply-script-bin` on **current live** bins.
+- After gameplay changes: copy **only** `gameplay.bin` and `gameplay.lzc`.
+- After FE changes: copy **only** `FE_ATTRIB.bin`.
+- Never deploy drifted `attributes.bin` from script-out (keep = original).
+- Visual unlocks often need **save** CareerUnlockLevel too — see playbooks 02/03.
+- Procedure: `agent/playbooks/01-attribulator-apply-script-bin.md`.

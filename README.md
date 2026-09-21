@@ -380,4 +380,6 @@ Su un’altra macchina: scarica di nuovo **entrambi** gli Assets, estrai dal `.0
 
 Lo script locale `publish-release.ps1` (se presente) serve solo a pubblicare Assets su GitHub; non fa parte del manuale utente e non va nei binari della Release. Gli archivi in `dist/` restano fuori da git (vedi `.gitignore`). Le note della Release stanno in `RELEASE_NOTES.md`. La cartella `qol-plan\` documenta un ramo QoL **separato** (copia di gioco `-qol` locale); non pubblicare una nuova Release finché non si decide esplicitamente di includere il QoL nel pack.
 
+**Agent Cursor (maintainers):** entry point [`AGENTS.md`](AGENTS.md) — layer EN (`agent/`, `.cursor/`); canon prodotto resta in `qol-plan\`.
+
 </details>
