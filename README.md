@@ -11,8 +11,16 @@ Flusso in una riga: **scarichi i 2 pezzi → estrai col `.001` → sposti la car
 > Il gioco sta **solo** nelle **[Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases)** (archivio diviso in 2 pezzi).  
 > Il repo è **privato**: per scaricare Assets devi essere **loggato su GitHub** con un account che ha accesso.
 
-Repo: [oscorpse-core/nfsmw-2005-win11-it](https://github.com/oscorpse-core/nfsmw-2005-win11-it)  
-Release attuale: **[v1.0.1](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.0.1)**
+Repo: [oscorpse-core/nfsmw-2005-win11-it](https://github.com/oscorpse-core/nfsmw-2005-win11-it)
+
+### Due linee di Release (stesso repo)
+
+| Linea | Cosa ottieni | Tag / Assets (esempio) | Docs |
+|-------|--------------|------------------------|------|
+| **Vanilla** | Pack IT completo, senza soft carriera | [**v1.0.1**](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.0.1) · `nfsmw-2005-win11-it.7z.00x` | Questo README · [`RELEASE_NOTES.md`](RELEASE_NOTES.md) |
+| **QoL** | Stesso pack **più** economia soft, visual, marker/Junkman, vendita 100%, ecc. | Tag `*-qol` · `nfsmw-2005-win11-it-qol.7z.00x` | [`QOL.md`](QOL.md) · [`RELEASE_NOTES-QOL.md`](RELEASE_NOTES-QOL.md) |
+
+Oggi pubblica e scaricabile: **vanilla v1.0.1**. La linea QoL usa gli stessi passi di install di questo README; il catalogo di cosa cambia è in **[`QOL.md`](QOL.md)**.
 
 ---
 
@@ -32,7 +40,8 @@ Release attuale: **[v1.0.1](https://github.com/oscorpse-core/nfsmw-2005-win11-it
 12. [Problemi frequenti](#problemi-frequenti)
 13. [Limiti noti](#limiti-noti)
 14. [Credits](#credits)
-15. [Note sul repository](#note-sul-repository)
+15. [Versione QoL](#versione-qol)
+16. [Note sul repository](#note-sul-repository)
 
 ---
 
@@ -71,9 +80,10 @@ Segui **nell’ordine** i passi sotto.
 
 1. Accedi a GitHub con un account che vede questo repo.
 2. Apri la release **[v1.0.1](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.0.1)** (o l’ultima in **[Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases)**).
-3. Nella sezione **Assets** scarica **tutti e due** i file (nessuno dei due è opzionale):
+3. Nella sezione **Assets** scarica **tutti e due** i file della linea **vanilla** (nessuno dei due è opzionale):
    - `nfsmw-2005-win11-it.7z.001` (~1,99 GB) — pezzo 1 di 2
-   - `nfsmw-2005-win11-it.7z.002` (~0,93 GB) — pezzo 2 di 2
+   - `nfsmw-2005-win11-it.7z.002` (~0,93 GB) — pezzo 2 di 2  
+   (Linea **QoL**: stessi passi ma file `nfsmw-2005-win11-it-qol.7z.001` / `.002` — vedi [`QOL.md`](QOL.md).)
 4. Mettili **nella stessa cartella**, senza rinominarli (es. `C:\Users\TUO_NOME\Downloads\nfsmw\`).
 
 Esempio corretto prima di estrarre:
@@ -256,7 +266,8 @@ Setup **ready-to-play** già assemblato:
 ## Controller
 
 - **Xbox** (o pad XInput): funziona da subito.
-- **PlayStation 5 (DualSense):** testato su questo setup; **non** serve DS4Windows né wrapper simili.
+- **PlayStation 5 (DualSense):** funziona **senza** DS4Windows né wrapper simili (valido per vanilla e QoL).
+- Nel pack **QoL** l’ini Widescreen è inoltre **tarata** (deadzone / ImproveGamepad) — dettaglio in [`QOL.md`](QOL.md).
 - Non servono Steam Input né tool di mapping.
 - Se non risponde: altra porta/cavo USB, oppure chiudi il gioco, collega il pad, riapri `speed.exe`.
 
@@ -364,22 +375,39 @@ Percorso: `Tools\Save Editor NFS-MW.exe`
 
 ---
 
+## Versione QoL
+
+Oltre al pack **vanilla** (manuale = questo README) c’è una linea **QoL**: stesso gioco IT completo, con soft economia, shop visual, marker/Junkman, vendita 100%, garage 25, DualSense tarato — **senza** alleggerire gare o cops.
+
+| Doc | Contenuto |
+|-----|-----------|
+| [`QOL.md`](QOL.md) | Catalogo completo: cosa cambia, cosa no, bounty, scartati |
+| [`RELEASE_NOTES-QOL.md`](RELEASE_NOTES-QOL.md) | Note della Release QoL (download Assets `…-qol.7z.00x`) |
+| `LEGGIMI.txt` nel pack estratto | Sintesi install (template in `pack-docs/qol/`) |
+
+Installazione: **identica** ai passi di questo README (redistributable, 1080p, Italian). Consigliata **carriera nuova**. Non mischiare cartella/save con il vanilla.
+
+---
+
 ## Note sul repository
 
 | Cosa | Dove |
 |------|------|
-| Documentazione pack | Questo repo (`README.md`, `RELEASE_NOTES.md`, `.gitignore`) |
-| Pacchetto giocabile | [Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases) — `.7z.001` + `.7z.002` (include `_CommonRedist\`) |
+| Manuale install (entrambe le linee) | Questo `README.md` |
+| Note Release **vanilla** | [`RELEASE_NOTES.md`](RELEASE_NOTES.md) |
+| Catalogo + note Release **QoL** | [`QOL.md`](QOL.md) · [`RELEASE_NOTES-QOL.md`](RELEASE_NOTES-QOL.md) |
+| Testi da copiare **dentro** i `.7z` | Cartella [`pack-docs/`](pack-docs/) (`LEGGIMI.txt`) |
+| Pacchetti giocabili | [Releases](https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases) — sempre `.001` **e** `.002` + `_CommonRedist\` |
 | Binari di gioco | **Non** in git |
-| Docs QoL carriera (locale, non in Release) | Cartella `qol-plan\` — freeze su copia `-qol`; **non** fa parte di v1.0.1 |
+| Note tecniche QoL (maintainer) | `qol-plan\` — non serve per giocare |
 
-Su un’altra macchina: scarica di nuovo **entrambi** gli Assets, estrai dal `.001`, metti la cartella sotto `C:\Users\...\Games\`, **installa `_CommonRedist`**, avvia `speed.exe`.
+Su un’altra macchina: scarica di nuovo **entrambi** gli Assets della linea scelta, estrai dal `.001`, metti la cartella sotto `C:\Users\...\Games\`, **installa `_CommonRedist`**, avvia `speed.exe`.
 
 <details>
 <summary>Per chi mantiene il pack (opzionale)</summary>
 
-Lo script locale `publish-release.ps1` (se presente) serve solo a pubblicare Assets su GitHub; non fa parte del manuale utente e non va nei binari della Release. Gli archivi in `dist/` restano fuori da git (vedi `.gitignore`). Le note della Release stanno in `RELEASE_NOTES.md`. La cartella `qol-plan\` documenta un ramo QoL **separato** (copia di gioco `-qol` locale); non pubblicare una nuova Release finché non si decide esplicitamente di includere il QoL nel pack.
+Script: `publish-release.ps1 -Line vanilla` oppure `-Line qol` (streaming; **non** cancella l’altra Release). Prima del 7z QoL: copia `pack-docs/qol/LEGGIMI.txt` e `QOL.md` nella root del pack. Checklist: [`agent/playbooks/10-public-release-assets.md`](agent/playbooks/10-public-release-assets.md). Non pubblicare finché non c’è OK esplicito.
 
-**Agent Cursor (maintainers):** entry point [`AGENTS.md`](AGENTS.md) — layer EN (`agent/`, `.cursor/`); canon prodotto resta in `qol-plan\`.
+**Agent Cursor:** [`AGENTS.md`](AGENTS.md) — layer EN; canon prodotto in `qol-plan\`.
 
 </details>

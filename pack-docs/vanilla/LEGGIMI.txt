@@ -1,0 +1,32 @@
+NFS Most Wanted 2005 — Win11 IT (pack VANILLA)
+==============================================
+
+Questa cartella è il pack completo in italiano per Windows 11
+(Black Edition + Widescreen Fix + Extra Options + redistributable).
+
+INSTALL RAPIDO
+--------------
+1. Installa TUTTI i file in _CommonRedist\ (prima di avviare il gioco).
+2. Avvia speed.exe
+3. Lingua: Italian
+4. Opzioni → Video: 1920x1080
+
+Documentazione completa (GitHub, repo privato — serve login):
+  https://github.com/oscorpse-core/nfsmw-2005-win11-it#readme
+
+Note di questa Release (vanilla v1.0.1):
+  https://github.com/oscorpse-core/nfsmw-2005-win11-it/blob/main/RELEASE_NOTES.md
+
+VERSIONE QoL (altra Release)
+----------------------------
+Esiste anche un pack con soft carriera (economia, visual, marker, ecc.).
+Catalogo: https://github.com/oscorpse-core/nfsmw-2005-win11-it/blob/main/QOL.md
+Non mischiare questa cartella vanilla con la cartella QoL / i relativi save.
+
+PAD
+---
+Xbox / XInput: ok.
+DualSense (PS5): ok senza DS4Windows.
+
+Problemi tipici: SmartScreen → Ulteriori informazioni → Esegui comunque.
+Se non parte: (ri)installa _CommonRedist.

@@ -1,13 +1,21 @@
-## NFS Most Wanted 2005 — Win11 IT (v1.0.1)
+## NFS Most Wanted 2005 — Win11 IT (v1.0.1) — pack **vanilla**
 
 Pack **completo e già giocabile**: Black Edition + Widescreen Fix + Extra Options + italiano (menu, FMV dove presenti, voci polizia) + **`_CommonRedist`** (runtime obbligatori).
+
+Questa Release è la linea **vanilla** (senza soft QoL carriera).
 
 - **Non serve il disco del gioco** — tutto è nella cartella estratta.
 - **Non serve** installare mod a parte per la prima partita.
 - **Obbligatorio:** dopo l’estrazione, installa i file in `_CommonRedist\` **prima** di avviare `speed.exe` (altrimenti il gioco spesso non parte).
 - **Windows 11** (testato). Repo **privato**: serve login GitHub con accesso.
 
-Manuale completo (procedure passo-passo): [README](https://github.com/oscorpse-core/nfsmw-2005-win11-it#readme)
+| Documento | Link |
+|-----------|------|
+| Manuale install completo | [README](https://github.com/oscorpse-core/nfsmw-2005-win11-it#readme) |
+| Catalogo versione **QoL** (altra Release) | [QOL.md](https://github.com/oscorpse-core/nfsmw-2005-win11-it/blob/main/QOL.md) |
+| Note Release QoL (quando pubblicata) | [RELEASE_NOTES-QOL.md](https://github.com/oscorpse-core/nfsmw-2005-win11-it/blob/main/RELEASE_NOTES-QOL.md) |
+
+**Due linee sullo stesso repo:** vanilla = questo tag; QoL = tag separato (`*-qol`) con Assets `…-qol.7z.00x`. Non mischiare le cartelle.
 
 ---
 
@@ -20,13 +28,13 @@ Manuale completo (procedure passo-passo): [README](https://github.com/oscorpse-c
 
 | | |
 |--|--|
-| **Scarica** | **Entrambi** `.7z.001` **e** `.7z.002` (~1,99 GB + ~0,93 GB), stessa cartella |
+| **Scarica** | **Entrambi** `nfsmw-2005-win11-it.7z.001` **e** `.7z.002` (~1,99 GB + ~0,93 GB), stessa cartella |
 | **Estrai** | **Solo** il `.001` con [7-Zip](https://www.7-zip.org/) (Win11: Mostra altre opzioni → 7-Zip → Estrai qui) |
 | **Il `.002`** | **Non** si estrae a parte: 7-Zip lo usa da solo durante l’estrazione del `.001` |
 
 Sono **un solo** archivio spezzato in 2 pezzi, non due pack diversi. Manca il `.002` → estrazione fallisce.
 
-Poi ottieni `nfsmw-2005-win11-it` con almeno: `speed.exe`, `dinput8.dll`, `scripts\`, **`_CommonRedist\`**, `Tools\`.
+Poi ottieni `nfsmw-2005-win11-it` con almeno: `speed.exe`, `dinput8.dll`, `scripts\`, **`_CommonRedist\`**, `Tools\`, **`LEGGIMI.txt`**.
 
 Spazio: ~3 GB download + ~4 GB estratti (~7 GB se tieni archivi e cartella insieme).
 
@@ -62,4 +70,4 @@ Se un installer dice “già installato”, ok. Se chiede riavvio, riavvia e con
 
 ### Incluso già pronto
 
-Gioco completo · Widescreen Fix + Extra Options · italiano + backup copspeech ENG · **`_CommonRedist\`** · `Tools\Save Editor NFS-MW.exe` (opzionale) · `LangChangeWS.bat` (solo se la lingua non resta: admin → `9`).
+Gioco completo · Widescreen Fix + Extra Options · italiano + backup copspeech ENG · **`_CommonRedist\`** · `Tools\Save Editor NFS-MW.exe` (opzionale) · `LangChangeWS.bat` (solo se la lingua non resta: admin → `9`) · **`LEGGIMI.txt`**.

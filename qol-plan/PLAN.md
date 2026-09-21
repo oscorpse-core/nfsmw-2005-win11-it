@@ -2,8 +2,9 @@
 
 **Punto fermo:** 2026-09-21  
 **Copia attiva:** `C:\Users\andre\_Main\games\nfs2005\nfsmw-2005-win11-it-qol`  
-**Originale pack:** intatto (`...\nfsmw-2005-win11-it`) — release pubblica ancora **v1.0.1** (QoL **non** in Release)  
+**Originale pack:** intatto (`...\nfsmw-2005-win11-it`) — pubblico **vanilla v1.0.1**; QoL = Release separata `*-qol` (docs ready; ship solo su OK esplicito)  
 **Fonte di verità:** [`knowledge/11-COHERENCE-FREEZE.md`](knowledge/11-COHERENCE-FREEZE.md)
+**Doc utente QoL:** [`../QOL.md`](../QOL.md) · note [`../RELEASE_NOTES-QOL.md`](../RELEASE_NOTES-QOL.md)
 
 Scopo: stesso loop carriera; meno grind/RNG/economia; libertà di spesa; gare/cops intatti.
 
@@ -18,7 +19,7 @@ Scopo: stesso loop carriera; meno grind/RNG/economia; libertà di spesa; gare/co
 | Visual shop **L8** post-#15 · Cost **$0** | **OK** live + playtest (integrali / save coerente) |
 | A3 Junkman 7×2 · A4 sell 100% · pink drive | **OK** |
 | Backlog / sospesi QoL | **Nessuno** |
-| Nuova Release pack | **No** (fuori scope di questo punto fermo) |
+| Nuova Release pack QoL | **Docs ready** — ship solo su richiesta esplicita (PB 10) |
 
 ---
 
@@ -52,7 +53,7 @@ Scopo: stesso loop carriera; meno grind/RNG/economia; libertà di spesa; gare/co
 | Rank lotto TORQUE/MASS | **SCARTATO** | Barre FE |
 | Junkman shop infinito | **SCARTATO** | A3 = stock 7×2 da marker |
 | Pack auto community | **FUORI SCOPE** | Progetto a parte |
-| Pubblicare QoL in Release | **Non ora** | Solo docs + copia `-qol` locale |
+| Pubblicare QoL in Release | **READY / non shipped** | Dual tag; vedi `QOL.md` + PB 10; non auto-publish |
 
 ---
 

@@ -58,8 +58,11 @@ Default: read freeze + playbook; open `01–09` only when context needed.
 | Source | Agent destination |
 |--------|-------------------|
 | [`scripts/a4_find_sell.py`](../qol-plan/knowledge/scripts/a4_find_sell.py) | PB 05 reference |
-| [`publish-release.ps1`](../publish-release.ps1) | PB 10 |
-| [`RELEASE_NOTES.md`](../RELEASE_NOTES.md) | PB 10 / public |
+| [`publish-release.ps1`](../publish-release.ps1) | PB 10 — `-Line vanilla\|qol` |
+| [`RELEASE_NOTES.md`](../RELEASE_NOTES.md) | PB 10 / public vanilla |
+| [`RELEASE_NOTES-QOL.md`](../RELEASE_NOTES-QOL.md) | PB 10 / public QoL notes |
+| [`QOL.md`](../QOL.md) | **Public user catalog** (IT) for QoL vs vanilla |
+| [`pack-docs/`](../pack-docs/) | In-archive `LEGGIMI.txt` templates (vanilla + qol) |
 | `qol-tools\` (outside git) | CANON paths; PB 01/09 — **never commit** |
 
 ## E. Session harvest (verified → playbooks)

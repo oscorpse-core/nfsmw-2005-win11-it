@@ -1,15 +1,49 @@
 #Requires -Version 5.1
-# Upload release assets via streaming HTTP (no full-file buffer).
-# gh release upload hangs on ~2GB files on Windows; this path does not.
+<#
+.SYNOPSIS
+  Upload GitHub Release assets via streaming HTTP (avoids gh hang on ~2GB).
+
+.PARAMETER Line
+  vanilla = pack stock IT (default). qol = pack QoL.
+
+.PARAMETER Tag
+  Override tag (default: vanilla v1.0.1, qol v1.1.0-qol).
+
+.PARAMETER ReplaceExisting
+  If set, delete ONLY this tag's release + git tag before recreate.
+  Never deletes other Releases (required for dual vanilla+QoL).
+
+.EXAMPLE
+  .\publish-release.ps1
+  .\publish-release.ps1 -Line qol
+  .\publish-release.ps1 -Line qol -Tag v1.1.0-qol -ReplaceExisting
+#>
+param(
+  [ValidateSet('vanilla', 'qol')]
+  [string]$Line = 'vanilla',
+  [string]$Tag = '',
+  [switch]$ReplaceExisting
+)
+
 $ErrorActionPreference = 'Stop'
 $Repo = 'oscorpse-core/nfsmw-2005-win11-it'
-$Tag  = 'v1.0.1'
 $Root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Dist = Join-Path $Root 'dist'
 $Log  = Join-Path $Dist 'publish-release.log'
-$Notes = Join-Path $Root 'RELEASE_NOTES.md'
-$Part1 = Join-Path $Dist 'nfsmw-2005-win11-it.7z.001'
-$Part2 = Join-Path $Dist 'nfsmw-2005-win11-it.7z.002'
+
+if ($Line -eq 'vanilla') {
+  if ([string]::IsNullOrWhiteSpace($Tag)) { $Tag = 'v1.0.1' }
+  $Notes = Join-Path $Root 'RELEASE_NOTES.md'
+  $Part1 = Join-Path $Dist 'nfsmw-2005-win11-it.7z.001'
+  $Part2 = Join-Path $Dist 'nfsmw-2005-win11-it.7z.002'
+  $Title = "$Tag - Pack Win11 IT vanilla (+ CommonRedist)"
+} else {
+  if ([string]::IsNullOrWhiteSpace($Tag)) { $Tag = 'v1.1.0-qol' }
+  $Notes = Join-Path $Root 'RELEASE_NOTES-QOL.md'
+  $Part1 = Join-Path $Dist 'nfsmw-2005-win11-it-qol.7z.001'
+  $Part2 = Join-Path $Dist 'nfsmw-2005-win11-it-qol.7z.002'
+  $Title = "$Tag - Pack Win11 IT QoL (+ CommonRedist)"
+}
 
 function Log([string]$msg) {
   $line = '[{0}] {1}' -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $msg
@@ -90,34 +124,34 @@ function Upload-AssetStreaming {
 
 New-Item -ItemType Directory -Force -Path $Dist | Out-Null
 if (Test-Path -LiteralPath $Log) { Remove-Item -LiteralPath $Log -Force }
-Log 'START streaming publisher'
+Log "START streaming publisher line=$Line tag=$Tag"
 
 foreach ($f in @($Part1, $Part2, $Notes)) {
   if (-not (Test-Path -LiteralPath $f)) { throw "Missing $f" }
 }
 
-Log 'Kill leftover gh/publish'
-Get-CimInstance Win32_Process -Filter "Name='gh.exe'" -ErrorAction SilentlyContinue |
-  ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
-Start-Sleep -Seconds 1
-
-$prev = $ErrorActionPreference
-$ErrorActionPreference = 'Continue'
-Log 'Delete existing releases'
-$ids = @(& gh api "repos/$Repo/releases" --jq '.[].id' 2>$null)
-foreach ($id in $ids) {
-  if ([string]::IsNullOrWhiteSpace([string]$id)) { continue }
-  Log "DELETE release $id"
-  & gh api -X DELETE "repos/$Repo/releases/$id" 2>$null | Out-Null
+# Safety: never wipe other Releases. Only optional replace of THIS tag.
+if ($ReplaceExisting) {
+  Log "ReplaceExisting: remove only tag $Tag"
+  $prev = $ErrorActionPreference
+  $ErrorActionPreference = 'Continue'
+  try {
+    $byTag = (& gh api "repos/$Repo/releases/tags/$Tag" 2>$null) | ConvertFrom-Json
+    if ($byTag -and $byTag.id) {
+      Log "DELETE release id=$($byTag.id) tag=$Tag"
+      & gh api -X DELETE "repos/$Repo/releases/$($byTag.id)" 2>$null | Out-Null
+    }
+  } catch { }
+  cmd /c "gh api -X DELETE repos/$Repo/git/refs/tags/$Tag >nul 2>nul"
+  $ErrorActionPreference = $prev
+} else {
+  Log 'ReplaceExisting not set — will fail if tag already exists (safe for dual-release)'
 }
-cmd /c "gh api -X DELETE repos/$Repo/git/refs/tags/$Tag >nul 2>nul"
-$ErrorActionPreference = $prev
 
 Log 'Create draft'
-& gh release create $Tag -R $Repo --draft --title 'v1.0.1 - Pack Win11 IT (+ CommonRedist)' --notes-file $Notes
+& gh release create $Tag -R $Repo --draft --title $Title --notes-file $Notes
 if ($LASTEXITCODE -ne 0) { throw 'release create failed' }
 
-# Resolve release id via JSON (jq boolean/draft filters are flaky under PowerShell)
 $releaseId = 0L
 try {
   $byTag = (& gh api "repos/$Repo/releases/tags/$Tag" 2>$null) | ConvertFrom-Json
@@ -133,7 +167,6 @@ Log "releaseId=$releaseId"
 $token = (& gh auth token).Trim()
 if ([string]::IsNullOrWhiteSpace($token)) { throw 'gh auth token empty' }
 
-# Smaller file first (faster feedback), then large part
 Upload-AssetStreaming -ReleaseId $releaseId -FilePath $Part2 -Token $token
 Upload-AssetStreaming -ReleaseId $releaseId -FilePath $Part1 -Token $token
 
@@ -145,4 +178,4 @@ if ($count -lt 2) { throw "Expected 2 assets, got $count" }
 Log 'Publish'
 & gh release edit $Tag -R $Repo --draft=false
 if ($LASTEXITCODE -ne 0) { throw 'publish failed' }
-Log 'PUBLISHED https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/v1.0.1'
+Log "PUBLISHED https://github.com/oscorpse-core/nfsmw-2005-win11-it/releases/tag/$Tag"

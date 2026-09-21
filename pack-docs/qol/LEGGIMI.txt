@@ -1,0 +1,39 @@
+NFS Most Wanted 2005 — Win11 IT (pack QoL)
+=========================================
+
+Stesso pack completo IT Win11 della linea vanilla, PIU soft carriera:
+economia, visual shop, marker/Junkman, vendita 100%, garage 25, DualSense tarato.
+Gare / cops / storia / fasce performance = come vanilla (non alleggeriti).
+
+INSTALL RAPIDO
+--------------
+1. Installa TUTTI i file in _CommonRedist\ (prima di avviare il gioco).
+2. Avvia speed.exe
+3. Lingua: Italian
+4. Opzioni → Video: 1920x1080
+5. Consigliata una CARRIERA NUOVA (non riusare save della cartella vanilla).
+
+COSA CAMBIA (catalogo completo)
+-------------------------------
+Apri QOL.md in questa stessa cartella
+oppure: https://github.com/oscorpse-core/nfsmw-2005-win11-it/blob/main/QOL.md
+
+Note Release QoL:
+  https://github.com/oscorpse-core/nfsmw-2005-win11-it/blob/main/RELEASE_NOTES-QOL.md
+
+Manuale install (procedure comuni):
+  https://github.com/oscorpse-core/nfsmw-2005-win11-it#readme
+
+LINEA VANILLA (senza soft)
+--------------------------
+Release separata sullo stesso repo (tag senza -qol).
+Non mischiare le due cartelle di gioco.
+
+PAD
+---
+Xbox / XInput: ok.
+DualSense (PS5): ok senza DS4Windows; in questo pack l'ini Widescreen
+e' gia' tarata (deadzone stick, ImproveGamepad off).
+
+Problemi tipici: SmartScreen → Ulteriori informazioni → Esegui comunque.
+Se non parte: (ri)installa _CommonRedist.
