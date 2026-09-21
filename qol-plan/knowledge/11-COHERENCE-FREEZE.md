@@ -44,11 +44,7 @@ Stesso loop carriera; meno grind/RNG/economia; libertà di spesa; **non** allegg
 
 ## APERTO (backlog)
 
-Nessuno. Freeze carriera **finito**.
-
-### Smoke opzionale (non backlog)
-
-- [ ] Aerografie integrali post-Sonny dopo Visual L8 (`10`)
+Nessuno. Freeze carriera **finito** · playtest visual/save **OK**.
 
 ---
 
@@ -88,6 +84,8 @@ Nessuno. Freeze carriera **finito**.
 - [x] Spot bounty #14  
 - [x] Visual re-apply 2026-09-21 (hud/decals/numbers su #15)  
 - [x] Visual **L8** (`qol-visual-unlock-l8.nfsms`)  
+- [x] Save visual `CareerUnlockLevel` allineato a L8 (integrali)  
+- [x] Playtest integrali Body/fiamme/tribal OK  
 - [x] Pink-slip `UnlockedAt` ≥ BL rivale  
 - [x] 3 HUD unique restano gated  
 

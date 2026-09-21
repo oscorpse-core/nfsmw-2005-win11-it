@@ -15,7 +15,7 @@ Scopo: stesso loop carriera; meno grind/RNG/economia; libertà di spesa; gare/co
 |------|--------|
 | Freeze carriera su `-qol` | **CHIUSO** — tutto in live |
 | Soft cash ×1.4 · bounty soft · Cost ×0.7 · FE-bars | **OK** |
-| Visual shop **L8** post-#15 · Cost **$0** | **OK** live · smoke aerografie **da confermare in gioco** |
+| Visual shop **L8** post-#15 · Cost **$0** | **OK** live + playtest (integrali / save coerente) |
 | A3 Junkman 7×2 · A4 sell 100% · pink drive | **OK** |
 | Backlog / sospesi QoL | **Nessuno** |
 | Nuova Release pack | **No** (fuori scope di questo punto fermo) |
@@ -37,13 +37,6 @@ Scopo: stesso loop carriera; meno grind/RNG/economia; libertà di spesa; gare/co
 | A4 | Sell = **100% Cost** | `speed.exe` · `15` |
 | A3 | Junkman **7×2** (#15–#2, NOS×2); Razor no | `16` |
 | Pink drive | `UnlockedAt` pink-slip **≥ # rivale** | FE · Vic/Supra ecc. |
-
----
-
-## Unica verifica rimasta (non è backlog)
-
-Dopo Sonny (#15): aerografie **integrali** shop (tribal/fiamme, vinyls L7–8) devono apparire sbloccate a $0.  
-Implementazione già in live (`qol-visual-unlock-l8.nfsms`). Dettaglio: `10`.
 
 ---
 
@@ -79,6 +72,7 @@ Implementazione già in live (`qol-visual-unlock-l8.nfsms`). Dettaglio: `10`.
 | `20260921-reapply-cash-bounty\` | Pre re-apply cash/bounty |
 | `20260921-reapply-visual\` | Pre re-apply visual |
 | `20260921-vinyl-l8\` | Pre Visual **L8** |
+| `20260921-vinyl-save-l8\` | VNDRY pre–allineo save visual L8 |
 | `20260921-pink-unlockedat\` | `FE_ATTRIB` pre–pink UnlockedAt |
 | `20260921-a3-junkman-x2\` | Pre-pack A3 |
 | `20260921-a3-nos-smoke-*\` | Pre-Taz VNDRY |

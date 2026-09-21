@@ -7,7 +7,7 @@ Visione condivisa e verificabile di MW 2005 carriera + QoL su `-qol`.
 | **Fonte di verità** | [`11-COHERENCE-FREEZE.md`](11-COHERENCE-FREEZE.md) |
 | Piano / punto fermo | [`../PLAN.md`](../PLAN.md) |
 
-**Punto fermo 2026-09-21:** freeze **chiuso** in live; visual **L8**; A3/A4; pink drive; DualSense; sospesi **scartati**; **nessun backlog**. Release pack pubblica **non** aggiornata (resta v1.0.1). Unica verifica: smoke aerografie integrali post-Sonny.
+**Punto fermo 2026-09-21:** freeze **chiuso**; visual **L8** + save coerente (playtest OK); A3/A4; pink drive; DualSense; sospesi **scartati**; **nessun backlog**. Pack pubblico resta **v1.0.1** (QoL solo `-qol` + docs) finché non si decide una Release dedicata.
 
 ---
 
@@ -48,7 +48,7 @@ Visione condivisa e verificabile di MW 2005 carriera + QoL su `-qol`.
 
 ## Prossimo
 
-Niente in backlog QoL. Smoke L8 aerografie = conferma utente, non nuovo lavoro.  
-Idee nuove = nuovo scope. Release pack QoL = decisione separata.
+Niente in backlog QoL. Idee nuove = nuovo scope.  
+Push docs / Release pack QoL = quando lo chiedi (non automatico).
 
 Se un doc contraddice `11` → vince `11`.

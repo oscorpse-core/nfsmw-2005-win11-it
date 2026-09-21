@@ -2,7 +2,7 @@
 
 Data: 2026-09-19 · re-apply + **L8** 2026-09-21  
 Intent: pezzi + estetiche sbloccate senza progressione fasce; performance livellata; costi visual **$0**.  
-**Punto fermo:** implementazione chiusa; smoke aerografie integrali = conferma in gioco (non backlog).
+**Punto fermo:** implementazione chiusa · playtest integrali + save coerente **OK** (2026-09-21).
 
 ## Come
 
@@ -44,7 +44,7 @@ Script: `qol-visual-unlock-max.nfsms`, `qol-visual-unlock-add15.nfsms`, `qol-vis
 - [x] Performance ancora gated  
 - [x] Re-apply 2026-09-21: bin15 hud/decals/numbers + max livelli  
 - [x] Visual **L8** applicato in live (vinyls/integrali + altre cat. fino a FE LEVEL_08)  
-- [ ] Smoke: aerografie **integrali** (tribal/fiamme) sbloccate post-Sonny dopo L8  
+- [x] Playtest: aerografie **integrali** (Body/tribal/fiamme) sbloccate · save allineato  
 
 
 
@@ -54,3 +54,14 @@ Script: `qol-visual-unlock-max.nfsms`, `qol-visual-unlock-add15.nfsms`, `qol-vis
 |------|------|-----|
 | Vinyls shop / aerografie integrali (tutte le auto) | FE `carparts/vinyls` LEVEL_01–08 | Unlock **L8** + $0 |
 | HUD unique ×3 | Marker `reward_hud` | Restano gated |
+
+## Save vs bin (gap integrali — 2026-09-21)
+
+`upgrade_vinyls` scrive in save su `UNLOCKABLE_VINYLS_GROUP_BODY` (`TheUnlockData[40]`).  
+Lo shop sblocca pezzi con `part.UpgradeLevel <= CareerUnlockLevel`. Il messaggio “batti # BL” è la stringa `CUSTOMIZATION_VISUAL_VINYLS_N`, non un check live sulla BL.
+
+Se Sonny/#14/#13 sono già battuti **prima** del patch L8, il save resta al vecchio livello (es. **VBODY=3**) anche col bin a 8 → pack **Body / fiamme / tribal** restano locked. Hood/rim possono essere già a 6 perché ri-awarded dopo il primo visual max.
+
+**Fix save (fatto su VNDRY):** `CareerUnlockLevel`/`QuickRaceUnlockLevel` visual → **8** (incl. VBODY + gruppi flame/tribal/…); MD5 `[0x34..len-16)`.  
+Backup: `qol-tools\backups\20260921-vinyl-save-l8\`.  
+Alternative senza patch: battere un altro rivale con `upgrade_vinyls` dopo L8 in bin (ri-award).
