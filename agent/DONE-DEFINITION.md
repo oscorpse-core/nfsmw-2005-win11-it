@@ -23,6 +23,9 @@
 
 ## Release (only if user asked)
 
-- [ ] Playbook 10 checklist complete
+- [ ] Playbook 10 checklist complete (correct **line**: vanilla vs qol)
 - [ ] Explicit user OK for tag/assets
-- [ ] README IT install still correct for that tag
+- [ ] `LEGGIMI.txt` (+ `QOL.md` if QoL) inside the 7z root
+- [ ] Matching `RELEASE_NOTES*.md`; README dual-line still accurate
+- [ ] `publish-release.ps1 -Line …` did **not** delete the other Release
+- [ ] Smoke extract + `_CommonRedist` + boot
