@@ -51,11 +51,14 @@ File: `scripts\NFSMostWanted.WidescreenFix.ini`
 | `LeftStickDeadzone` | **28.0** | Contro drift orbit camera |
 | `RightStickDeadzone` | **28.0** | Idem |
 | `StickLookSensitivity` | **0.0** | Niente look stick fantasma |
-| `ForcedGPUVendor` | **0** | Non forzare NVIDIA; AMD/Intel usano il vendor reale (qualità ombre/gamma resta) |
+| `ForcedGPUVendor` | **0x10DE** | Su NVIDIA serve per menu Video / risoluzioni alte; `=0` in test ha limitato a ~1080p. |
+| Quality+ ombre 4096 / SMAA / gamma 2 | **SCARTATO** | Poco guadagno visivo, micro-stutter |
 
-Qualità grafica lasciata alta: `ShadowsRes=2048`, `ImproveShadowLOD=1`, `AutoScaleShadowsRes=1`, `ConsoleGamma=1`.
+Qualità grafica “alta stabile”: `ShadowsRes=2048`, `ImproveShadowLOD=1`, `AutoScaleShadowsRes=1`, `ConsoleGamma=1`, `SMAA=0`.
 
-Backup storico pad: `NFSMostWanted.WidescreenFix.ini.bak-before-gamepad-0` (rimosso dal pack live 2026-09-22; copia in `qol-tools\backups\20260922-pack-cleanup-*`).  
+**TODO:** ~~ripubblicare `v1.1.0-qol`~~ Assets allineati 2026-09-22 (ForcedGPU 0x10DE, no quality+).
+
+Backup pad storico: in `qol-tools\backups\20260922-pack-cleanup-*`.  
 Per pad XInput “pulito” (DS4Windows/Steam + hide DS): si può rivalutare ImproveGamepad 1/2.
 
 ---

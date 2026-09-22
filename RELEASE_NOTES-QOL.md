@@ -77,4 +77,5 @@ Oltre al pack vanilla, questa Release include modifiche a:
 ### Housekeeping pack (2026-09-22)
 
 - Rimosso residuo `NFSMostWanted.WidescreenFix.ini.bak-before-gamepad-0`.
-- `ForcedGPUVendor = 0` (niente spoof NVIDIA; ombre/gamma/dettaglio **invariati** ad alta qualità).
+- Widescreen live: **`ForcedGPUVendor = 0x10DE`** (menu Video / risoluzioni alte su NVIDIA), ombre **2048**, SMAA **0**, gamma **1**, DualSense tarato (ImproveGamepad 0, DZ 28).
+- Profilo “quality+” (4096 / SMAA / gamma 2) **scartato** dopo test: poco guadagno visivo, micro-stutter, risoluzioni 2K perse con `ForcedGPUVendor = 0`.
