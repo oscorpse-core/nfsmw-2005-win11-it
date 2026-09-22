@@ -15,10 +15,12 @@
 | `ImproveGamepadSupport` | **0** | DualSense raw DInput breaks FE if 1 |
 | `LeftStickDeadzone` / `RightStickDeadzone` | **28.0** | Camera drift |
 | `StickLookSensitivity` | **0.0** | No ghost look |
+| `ForcedGPUVendor` | **0** | Don’t spoof NVIDIA (AMD/Intel OK); keep high shadow/gamma settings |
 
-## Evidence (verified 2026-09-21)
+## Evidence (verified 2026-09-21…2026-09-22)
 
 - DualSense usable with ImproveGamepad=0; A4 pad scare was Widescreen, not sell patch.
+- 2026-09-22: removed `*.bak-before-gamepad-0` from pack; `ForcedGPUVendor=0` (graphics quality knobs unchanged).
 
 ## Links
 

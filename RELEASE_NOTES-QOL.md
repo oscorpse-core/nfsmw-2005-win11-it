@@ -73,3 +73,8 @@ Oltre al pack vanilla, questa Release include modifiche a:
 2. Lingua **Italian**.
 3. Video **1920×1080**.
 4. Pad Xbox / DualSense senza DS4Windows.
+
+### Housekeeping pack (2026-09-22)
+
+- Rimosso residuo `NFSMostWanted.WidescreenFix.ini.bak-before-gamepad-0`.
+- `ForcedGPUVendor = 0` (niente spoof NVIDIA; ombre/gamma/dettaglio **invariati** ad alta qualità).
